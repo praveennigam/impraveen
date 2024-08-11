@@ -15,21 +15,21 @@ const Projects = () => {
           Projects
         </span>
       </motion.h1>
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap items-center justify-center">
         {PROJECTS.map((project, index) => (
           <motion.div
             key={index}
             whileInView={{ opacity: 1, x: 0 }}
             initial={{ opacity: 0, x: 100 }}
             transition={{ duration: 0.7 }}
-            className="w-full lg:w-1/2 lg:p-6"
+            className="w-full lg:w-3/4 flex flex-col lg:flex-row lg:items-center lg:justify-center lg:px-6"
           >
-            <div className="flex lg:w-1/2 lg:ml-14 items-center justify-center">
+            <div className="flex items-center justify-center w-full lg:w-1/2">
               <img
                 src={project.image}
                 height={150}
                 width={150}
-                className="rounded-xl w-1/2 lg:w-full lg:mr-32 mb-4 mt-12  max-w-md"
+                className="rounded-xl lg:w-3/4 mb-4 mt-12"
                 alt={project.title}
               />
             </div>
@@ -37,16 +37,16 @@ const Projects = () => {
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: -100 }}
               transition={{ duration: 1 }}
-              className="w-full mt-12 lg:w-1/2 lg:mt-32"
+              className="w-full lg:w-1/2 lg:ml-14 mt-12 lg:mt-0"
             >
-              <div className="justify-center lg:justify-start sm:w-1/2">
+              <div className="text-center lg:text-left">
                 <h4 className="text-xl text-purple-500 font-sans">
                   {project.title}
                 </h4>
-                <p className="max-w-xl py-2 font-light font-sans">
+                <p className="max-w-xl py-2 font-light font-sans mx-auto lg:mx-0">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap">
+                <div className="flex flex-wrap justify-center lg:justify-start">
                   {project.technologies.map((tech, index) => (
                     <span
                       key={index}
@@ -60,79 +60,26 @@ const Projects = () => {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    style={{
-                      backgroundImage:
-                        "linear-gradient(to right, from-purple-400, via-pink-500, to-rose-600)",
-                      color: "#fff",
-                      paddingRight: "8px",
-                      paddingLeft: "8px",
-                      paddingTop: "12px",
-                      paddingBottom: "12px",
-                      fontWeight: "600",
-                      borderRadius: "0.375rem",
-                      boxShadow: "0 1px 2px 0 rgba(206, 190, 190, 0.582)",
-                      outline: "none",
-                      border: "none",
-                      cursor: "pointer",
-                      backgroundClip: "text",
-                    }}
+                    className="bg-gradient-to-r from-blue-700 via-purple-500 to-yellow-400 text-white py-2 px-4 rounded-lg shadow-md mx-2"
                     onClick={() => window.open(project.userSite, "_blank")}
                   >
-                    <span className="bg-gradient-to-r from-blue-700 via-purple-500 to-yellow-400 bg-clip-text tracking-tight text-transparent">
-                      Visit User Site
-                    </span>
+                    Visit User Site
                   </motion.button>
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    style={{
-                      backgroundImage:
-                        "linear-gradient(to right, from-purple-400, via-pink-500, to-rose-600)",
-                      color: "#fff",
-                      paddingRight: "8px",
-                      paddingLeft: "8px",
-                      marginLeft: "14px",
-                      paddingTop: "12px",
-                      paddingBottom: "12px",
-                      fontWeight: "600",
-                      borderRadius: "0.375rem",
-                      boxShadow: "0 1px 2px 0 rgba(206, 190, 190, 0.582)",
-                      outline: "none",
-                      border: "none",
-                      cursor: "pointer",
-                      backgroundClip: "text",
-                    }}
+                    className="bg-gradient-to-r from-purple-400 via-pink-500 to-rose-600 text-white py-2 px-4 rounded-lg shadow-md mx-2"
                     onClick={() => window.open(project.adminSite, "_blank")}
                   >
-                    <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-green-700 bg-clip-text tracking-tight text-transparent">
-                      Visit Admin Site
-                    </span>
+                    Visit Admin Site
                   </motion.button>
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    style={{
-                      backgroundImage:
-                        "linear-gradient(to right, from-purple-400, via-pink-500, to-rose-600)",
-                      color: "#fff",
-                      paddingRight: "8px",
-                      paddingLeft: "8px",
-                      marginLeft: "14px",
-                      paddingTop: "12px",
-                      paddingBottom: "12px",
-                      fontWeight: "600",
-                      borderRadius: "0.375rem",
-                      boxShadow: "0 1px 2px 0 rgba(206, 190, 190, 0.582)",
-                      outline: "none",
-                      border: "none",
-                      cursor: "pointer",
-                      backgroundClip: "text",
-                    }}
+                    className="bg-gradient-to-r from-blue-400 via-purple-500 to-green-700 text-white py-2 px-4 rounded-lg shadow-md mx-2"
                     onClick={() => window.open(project.git, "_blank")}
                   >
-                    <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-green-700 bg-clip-text tracking-tight text-transparent">
-                      Git Repository
-                    </span>
+                    Git Repository
                   </motion.button>
                 </div>
               </div>
