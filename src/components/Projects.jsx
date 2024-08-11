@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Projects = () => {
   return (
-    <div className="border-b border-neutral-950 pb-16">
+    <div className="border-b border-neutral-950 pb-12">
       <motion.h1
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
@@ -29,7 +29,7 @@ const Projects = () => {
                 src={project.image}
                 height={150}
                 width={150}
-                className="rounded-2xl w-1/2 lg:w-full lg:mr-32 mb-4 mt-28 max-w-md"
+                className="rounded-xl w-1/2 lg:w-full lg:mr-32 mb-4 mt-12  max-w-md"
                 alt={project.title}
               />
             </div>

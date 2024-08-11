@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)file:///C:/Users/Dell/Desktop/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Praveen Nigam</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        
+        .container {
+            width: 80%;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        header {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px 8px 0 0;
+            text-align: center;
+        }
+        
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.2em;
+        }
+        
+        h2 {
+            color: #007BFF;
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .section {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        .contact-info p {
+            margin: 5px 0;
+        }
+        
+        .section ul li {
+            background: #e9f5ff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section ul li:nth-child(even) {
+            background: #f4faff;
+        }
+        
+        .section ul li a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+        
+        .section ul li a:hover {
+            text-decoration: underline;
+        }
+        
+        .section p {
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Praveen Nigam</h1>
+            <p>Full Stack Developer</p>
+        </header>
+
+        <div class="section contact-info">
+            <h2>Contact Information</h2>
+            <p>Email: <a href="mailto:praveennigam1999@gmail.com">praveennigam1999@gmail.com</a></p>
+            <p>Phone: <a href="tel:+919109481480">+91 9109481480</a></p>
+            <p>Address: 799, Sector R, Pioneer Institute, Indore, Madhya Pradesh, India, 452010</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/impraveen1999/" target="_blank">linkedin.com/in/impraveen1999</a></p>
+            <p>Portfolio: <a href="https://impraveen.netlify.app/" target="_blank">impraveen.netlify.app</a></p>
+            <p>GitHub: <a href="https://github.com/praveennigam/MernStack-by-Praveen" target="_blank">github.com/praveennigam/MernStack-by-Praveen</a></p>
+        </div>
+
+        <div class="section">
+            <h2>Professional Summary</h2>
+            <p>MCA graduate with a strong background in JavaScript and Java programming seeking a position as a Computer Software Developer. Fresh and eager to apply skills in software development, problem-solving, and teamwork to contribute to the success
+                of a dynamic organization.</p>
+        </div>
+
+        <div class="section">
+            <h2>Key Skills</h2>
+            <ul>
+                <li>React</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Bootstrap 4</li>
+                <li>JavaScript</li>
+                <li>OOP Concepts</li>
+                <li>Node.js</li>
+                <li>Express.js</li>
+                <li>MongoDB</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Soft Skills</h2>
+            <ul>
+                <li>Quick learner with good grasping ability</li>
+                <li>Action-oriented and result-focused</li>
+                <li>Lead &amp; work as a team in an organized way</li>
+                <li>Great time management skills</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Education</h2>
+            <ul>
+                <li><strong>MCA in Software Engineering</strong> - Shri Vaishnav Vidyapeeth Vishwavidyalaya, Indore (2021 - Oct 2023) Graduated with 6.2 CGPA</li>
+                <li><strong>BSc in Computer Science in Information Technology</strong> - Devi Ahilya Vishwavidyalaya, Indore (2017 - May 2021) Graduated with 6.54 CGPA</li>
+                <li><strong>12th Grade</strong> - Madhya Pradesh Board of Secondary Education (Jun 2016 - May 2017) Graduated with 64.79%</li>
+                <li><strong>10th Grade</strong> - Madhya Pradesh Board of Secondary Education (Jun 2014 - May 2015) Graduated with 79.89%</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Internship</h2>
+            <ul>
+                <li><strong>Intern</strong> - Seconds Digital Solutions Private Limited (Feb 2023 - May 2023) [Remote]</li>
+                <li><strong>Web Development Trainee</strong> - Crush IT Techno (Running)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Projects</h2>
+            <ul>
+                <li><strong>Food Delivery Website</strong> - <a href="https://food-deliveryapp-frontend.onrender.com/#explore-menu" target="_blank">User Site</a>, <a href="https://food-deliveryapp-admin.onrender.com/" target="_blank">Admin Site</a>, <a href="https://github.com/praveennigam/deliveryApp" target="_blank">GitHub</a></li>
+                <li><strong>E-Commerce Shopping Website</strong> - <a href="https://user-67cg.onrender.com/" target="_blank">User Site</a>, <a href="https://shopbyme.onrender.com/" target="_blank">Admin Site</a>, <a href="https://github.com/praveennigam/ShopByme" target="_blank">GitHub</a></li>
+            </ul>
+            <p>Details:</p>
+            <ul>
+                <li><strong>Food Delivery Website:</strong> An intuitive food delivery platform with an admin panel for restaurant management and a secure payment system using Stripe. Developed using HTML, CSS, React, Node.js, Express, and MongoDB.</li>
+                <li><strong>E-Commerce Shopping Website:</strong> A comprehensive e-commerce platform featuring both admin and user panels. The user panel offers a seamless shopping experience with product browsing, cart management, and secure payment processing.
+                    Developed using HTML, CSS, React, Node.js, Express, and MongoDB.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Hobbies</h2>
+            <ul>
+                <li>Playing Snooker</li>
+                <li>Cricket</li>
+            </ul>
+        </div>
+    </div>
+
+
+</body></html>

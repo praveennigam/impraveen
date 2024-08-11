@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 import {
   FaLinkedin,
@@ -6,6 +7,7 @@ import {
   FaWhatsapp,
   FaPhone,
   FaInstagram,
+  FaFilePdf,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 
@@ -14,6 +16,8 @@ const rotateAnimation = {
 };
 
 const Navbar = () => {
+  const navigate = useNavigate(); // Hook to navigate programmatically
+
   return (
     <nav className="mb-20 items-center justify-between py-6 flex">
       <motion.div
@@ -24,7 +28,8 @@ const Navbar = () => {
         <img
           src={logo}
           alt="Logo"
-          className="h-14 w-14 rounded-full mx-1 my-1 logo relative z-10"
+          className="h-14 w-14 rounded-full mx-1 my-1 logo relative z-10 cursor-pointer"
+          onClick={() => navigate("/")} // Navigate to home page on logo click
         />
         <div className="absolute inset-0 rounded-full bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-600 opacity-50 z-0"></div>
       </motion.div>
@@ -63,6 +68,10 @@ const Navbar = () => {
               "_blank"
             )
           }
+        />
+        <FaFilePdf
+          className="text-white cursor-pointer"
+          onClick={() => navigate("/resume")} // Navigate to Resume page on click
         />
       </div>
     </nav>
