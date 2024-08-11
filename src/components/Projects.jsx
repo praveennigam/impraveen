@@ -29,7 +29,7 @@ const Projects = () => {
                 src={project.image}
                 height={150}
                 width={150}
-                className="rounded-2xl w-1/2 lg:w-full lg:mr-32 mb-4 mt-12 max-w-md"
+                className="rounded-2xl w-1/2 lg:w-full lg:mr-32 mb-4 mt-28 max-w-md"
                 alt={project.title}
               />
             </div>
