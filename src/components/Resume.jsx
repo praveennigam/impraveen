@@ -152,10 +152,18 @@ const Resume = () => {
           Professional Summary
         </h2>
         <p>
-          MCA graduate with a strong background in JavaScript and Java
-          programming seeking a position as a Computer Software Developer. Fresh
-          and eager to apply skills in software development, problem-solving,
-          and teamwork to contribute to the success of a dynamic organization.
+          I am a passionate full stack developer eager to start my career by
+          crafting robust and scalable web applications. Recently graduating
+          with a degree in Computer Science, I have developed strong skills in
+          front-end technologies like React, HTML, CSS, and BootStrap, as well
+          as back-end technologies like Node.js, Express, and MongoDB. My
+          journey in web development began with a strong curiosity for
+          technology and problem-solving. I thrive in collaborative settings,
+          and I am excited to apply my hands-on experience to create innovative
+          solutions that deliver exceptional user experiences. Beyond coding, I
+          enjoy exploring new technologies, staying active in the tech
+          community, and am eager to continue learning in a professional
+          environment.
         </p>
       </section>
 
