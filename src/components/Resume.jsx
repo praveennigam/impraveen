@@ -26,7 +26,7 @@ const Resume = () => {
   const downloadPDF = () => {
     const element = document.querySelector(".resume-container");
     const options = {
-      margin: [0.5, 0.5],
+      margin: [0.2, 0.2],
       filename: "Praveen_Nigam_Resume.pdf",
       image: {
         type: "jpeg",
@@ -70,13 +70,13 @@ const Resume = () => {
   }, []);
 
   return (
-    <div className="resume-container mx-auto max-w-4xl bg-white p-4 rounded-lg shadow-md text-gray-800">
-      <header className="bg-blue-500 text-white p-5 rounded-t-lg mb-4 text-center">
+    <div className="resume-container mx-auto max-w-4xl bg-white p-1 rounded-lg shadow-md text-gray-800">
+      <header className="bg-blue-500 text-white p-5 rounded-t-lg mb-2 text-center">
         <h1 className="text-2xl font-semibold">Praveen Nigam</h1>
         <p className="text-sm">Mern Stack Developer</p>
       </header>
 
-      <div className="flex justify-center mb-4">
+      <div className="flex justify-center mb-2">
         <button
           className="download-button bg-blue-500 text-white py-2 px-4 rounded-lg flex items-center hover:bg-blue-700"
           onClick={downloadPDF}
@@ -90,7 +90,7 @@ const Resume = () => {
       </div>
 
       <section className="bg-gray-100 p-4 rounded-lg shadow-sm mb-4">
-        <h2 className="text-xl font-semibold text-blue-500 border-b-2 border-blue-500 pb-2 mb-2">
+        <h2 className="text-xl font-semibold text-blue-500 border-b-2 border-blue-500 pb-2 mb-1">
           Contact Information
         </h2>
         <p className="mb-2">
@@ -102,17 +102,17 @@ const Resume = () => {
             praveennigam1999@gmail.com
           </a>
         </p>
-        <p className="mb-2">
+        <p className="mb-1">
           Phone:{" "}
           <a href="tel:+919109481480" className="text-blue-500 hover:underline">
             +91 9109481480
           </a>
         </p>
-        <p className="mb-2">
+        <p className="mb-1">
           Address: 799, Sector R, Pioneer Institute, Indore, Madhya Pradesh,
           India, 452010
         </p>
-        <p className="mb-2">
+        <p className="mb-1">
           LinkedIn:{" "}
           <a
             href="https://www.linkedin.com/in/impraveen1999/"
@@ -123,7 +123,7 @@ const Resume = () => {
             linkedin.com/in/impraveen1999
           </a>
         </p>
-        <p className="mb-2">
+        <p className="mb-1">
           Portfolio:{" "}
           <a
             href="https://impraveen.onrender.com/"
@@ -134,7 +134,7 @@ const Resume = () => {
             impraveen.onrender.com
           </a>
         </p>
-        <p className="mb-2">
+        <p className="mb-1">
           GitHub:{" "}
           <a
             href="https://github.com/praveennigam"
@@ -148,7 +148,7 @@ const Resume = () => {
       </section>
 
       <section className="bg-gray-100 p-4 rounded-lg shadow-sm mb-4">
-        <h2 className="text-xl font-semibold text-blue-500 border-b-2 border-blue-500 pb-2 mb-2">
+        <h2 className="text-xl font-semibold text-blue-500 border-b-1 border-blue-500 pb-4 mb-4">
           Professional Summary
         </h2>
         <p>
@@ -167,7 +167,7 @@ const Resume = () => {
         </p>
       </section>
 
-      <div className="flex flex-wrap gap-4 mb-4">
+      <div className="flex flex-wrap gap-4 mb-5">
         <section className="bg-gray-100 p-4 rounded-lg shadow-sm flex-1 min-w-[270px]">
           <h2 className="text-xl font-semibold text-blue-500 border-b-2 border-blue-500 pb-2 mb-2">
             Key Skills
