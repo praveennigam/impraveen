@@ -51,7 +51,7 @@ export const PROJECTS = [{
         userSite: "https://user-67cg.onrender.com/",
         adminSite: "https://shopbyme.onrender.com/",
         git: "https://github.com/praveennigam/ShopByme",
-        description: "A comprehensive e-commerce platform featuring both admin and user panels. The user panel offers a seamless shopping experience with product browsing, cart management, and secure payment processing. The admin panel allows for efficient product management, order tracking, and user management. Developed using HTML, CSS, React, Node.js, Express, and MongoDB.",
+        description: "A comprehensive e-commerce platform featuring both admin and user panels. The user panel offers a seamless shopping experience with product browsing, cart management, and secure payment processing. The admin panel allows for efficient product management, order tracking, and user management. Developed using HTML, CSS, React, Node.js, Express, and MongoDB. ( passcode 1234@4321  in Admin )",
         technologies: ["HTML", "CSS", "React", "Node.js", "Express", "MongoDB"],
     }
 ];

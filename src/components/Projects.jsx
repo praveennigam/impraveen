@@ -15,14 +15,14 @@ const Projects = () => {
           Projects
         </span>
       </motion.h1>
-      <div className="flex flex-wrap items-center justify-center">
+      <div className="flex flex-wrap  items-center justify-center">
         {PROJECTS.map((project, index) => (
           <motion.div
             key={index}
             whileInView={{ opacity: 1, x: 0 }}
             initial={{ opacity: 0, x: 100 }}
             transition={{ duration: 0.7 }}
-            className="w-full lg:w-3/4 flex flex-col lg:flex-row lg:items-center lg:justify-center lg:px-6"
+            className="w-full  lg:w-3/4 mt-8 flex flex-col lg:flex-row lg:items-center lg:justify-center lg:px-6"
           >
             <div className="flex items-center justify-center w-full lg:w-1/2">
               <img
@@ -63,7 +63,7 @@ const Projects = () => {
                     className="bg-gradient-to-r from-blue-700 via-purple-500 to-yellow-400 text-white py-2 px-4 rounded-lg shadow-md mx-2"
                     onClick={() => window.open(project.userSite, "_blank")}
                   >
-                    Visit User Site
+                    User Site
                   </motion.button>
                   <motion.button
                     whileHover={{ scale: 1.05 }}
@@ -71,7 +71,7 @@ const Projects = () => {
                     className="bg-gradient-to-r from-purple-400 via-pink-500 to-rose-600 text-white py-2 px-4 rounded-lg shadow-md mx-2"
                     onClick={() => window.open(project.adminSite, "_blank")}
                   >
-                    Visit Admin Site
+                    Admin Site
                   </motion.button>
                   <motion.button
                     whileHover={{ scale: 1.05 }}
