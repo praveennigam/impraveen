@@ -1,4 +1,5 @@
 import project1 from '../assets/project-1.jpg'
+import project2 from '../assets/project-2.jpg'
 
 export const HERO_CONTENT = `I am a passionate full stack developer eager to start my career by crafting robust and scalable web applications. Having recently completed my studies in Computer Science, I have developed strong skills in front-end technologies like React, HTML, and CSS, as well as back-end technologies like Node.js, Express, and MongoDB. My goal is to leverage my knowledge and enthusiasm to create innovative solutions that deliver exceptional user experiences.`;
 
@@ -35,16 +36,25 @@ export const EXPERIENCES = [{
     },
 ];
 
-
-export const PROJECTS = {
-    title: "Food Delivery Website",
-    image: project1,
-    site: "https://food-deliveryapp-frontend.onrender.com/#explore-menu",
-    git: "https://github.com/praveennigam/deliveryApp",
-    description: "An intuitive food delivery platform with an admin panel for restaurant management and a secure payment system using Stripe. Customers can easily browse restaurant menus, select dishes, and place orders. The website features real-time order tracking and seamless payment integration. Developed using HTML, CSS, React, Node.js, Express, and MongoDB.",
-    technologies: ["HTML", "CSS", "React", "Node.js", "Express", "MongoDB"],
-};
-
+export const PROJECTS = [{
+        title: "Food Delivery Website",
+        image: project1,
+        userSite: "https://food-deliveryapp-frontend.onrender.com/#explore-menu",
+        adminSite: "https://food-deliveryapp-admin.onrender.com",
+        git: "https://github.com/praveennigam/deliveryApp",
+        description: "An intuitive food delivery platform with an admin panel for restaurant management and a secure payment system using Stripe. Customers can easily browse restaurant menus, select dishes, and place orders. The website features real-time order tracking and seamless payment integration. Developed using HTML, CSS, React, Node.js, Express, and MongoDB.",
+        technologies: ["HTML", "CSS", "React", "Node.js", "Express", "MongoDB"],
+    },
+    {
+        title: "E-Commerce Shopping Website",
+        image: project2,
+        userSite: "https://user-67cg.onrender.com/",
+        adminSite: "https://shopbyme.onrender.com/",
+        git: "https://github.com/praveennigam/ShopByme",
+        description: "A comprehensive e-commerce platform featuring both admin and user panels. The user panel offers a seamless shopping experience with product browsing, cart management, and secure payment processing. The admin panel allows for efficient product management, order tracking, and user management. Developed using HTML, CSS, React, Node.js, Express, and MongoDB.",
+        technologies: ["HTML", "CSS", "React", "Node.js", "Express", "MongoDB"],
+    }
+];
 
 export const CONTACT = {
     address: "Indore,India",
