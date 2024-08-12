@@ -30,7 +30,7 @@ const Resume = () => {
       filename: "Praveen_Nigam_Resume.pdf",
       image: {
         type: "jpeg",
-        quality: 0.7,
+        quality: 1,
       },
       html2canvas: {
         scale: 2,
