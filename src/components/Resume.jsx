@@ -148,10 +148,10 @@ const Resume = () => {
       </section>
 
       <section className="bg-gray-100 p-4 rounded-lg shadow-sm mb-4">
-        <h2 className="text-xl font-semibold text-blue-500 border-b-1 border-blue-500 pb-4 mb-4">
+        <h2 className="text-xl font-semibold text-blue-500 border-b-2 border-blue-500 pb-2 mb-2">
           Professional Summary
         </h2>
-        <p>
+        <p className="pb-2 mb-2">
           I am a passionate full stack developer eager to start my career by
           crafting robust and scalable web applications. Recently graduating
           with a degree in Computer Science, I have developed strong skills in
@@ -172,7 +172,7 @@ const Resume = () => {
           <h2 className="text-xl font-semibold text-blue-500 border-b-2 border-blue-500 pb-2 mb-2">
             Key Skills
           </h2>
-          <ul className="list-disc pl-5 space-y-1">
+          <ul className="list-disc pl-5 mb-1 space-y-1">
             <li>React</li>
             <li>HTML</li>
             <li>CSS</li>
