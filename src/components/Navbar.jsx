@@ -32,7 +32,7 @@ const Navbar = () => {
         
       
       <div className="flex items-center justify-center gap-3 text-xl">
-        <FaLinkedin className="text-blue-600 cursor-pointer" onClick={() => window.open("https://www.linkedin.com/in/impraveen1999", "_blank")} />
+        <FaLinkedin className="text-blue-500 cursor-pointer" onClick={() => window.open("https://www.linkedin.com/in/impraveen1999", "_blank")} />
         <FaFacebook className="text-blue-700 cursor-pointer" onClick={() => window.open("https://www.facebook.com/share/7EXCGjcN6jhvLf4g", "_blank")} />
         <FaWhatsapp className="text-green-500 cursor-pointer" onClick={() => window.open("https://wa.me/+919109481480", "_blank")} />
         <FaPhone className="text-purple-400 cursor-pointer" onClick={() => window.open("tel:+919109481480", "_blank")} />
