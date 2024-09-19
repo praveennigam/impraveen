@@ -53,11 +53,21 @@ export const PROJECTS = [{
         git: "https://github.com/praveennigam/ShopByme",
         description: "A comprehensive e-commerce platform featuring both admin and user panels. The user panel offers a seamless shopping experience with product browsing, cart management, and secure payment processing. The admin panel allows for efficient product management, order tracking, and user management. Developed using HTML, CSS, React, Node.js, Express, and MongoDB. ( passcode 1234@4321  in Admin )",
         technologies: ["HTML", "CSS", "React", "Node.js", "Express", "MongoDB"],
-    }
+    },
+    {
+      title: "BeatTube",
+      image: "https://www.videocrypt.com/website_assets/img/product/two-way-streaming.webp",
+      userSite: "https://beatbypraveen.onrender.com/",
+      adminSite: "",
+      git: "https://github.com/praveenigam/BeatTube",
+      description: "A video streaming platform similar to Netflix, offering a rich user experience with a variety of video content. Users can browse, watch, and manage their playlists seamlessly. Developed using React, Node.js, Express, and MongoDB.",
+      technologies: ["HTML", "CSS","Tailwind", "React", "Node.js", "Express", "MongoDB"],
+  }
 ];
 
 export const CONTACT = {
     address: "Indore,India",
     phoneNo: "+91 9109481480 ",
     email: "praveennigam1999@gmail.com",
+
 };
