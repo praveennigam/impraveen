@@ -10,7 +10,7 @@ const About = () => {
         <span className="bg-gradient-to-r from-orange-900 via-blue-400 font-semibold to-yellow-300 bg-clip-text mr-2 text-transparent">
           About{" "}
         </span>{" "}
-        <span className="text-neutral-500">Me</span>
+        <span className="my-2 max-w-xl py-6 font-medium  tracking-thin text-md  lg:text-left bg-gradient-to-r from-blue-400 via-slate-200 to-purple-400 bg-clip-text text-transparent">Me</span>
       </h1>
       <div className="flex flex-wrap">
         <motion.div
@@ -34,7 +34,7 @@ const About = () => {
           className="w-full lg:w-1/2"
         >
           <div className="flex justify-center lg:justify-start">
-            <p className="lg:my-40 lg:ml-16 max-w-xl py-10 font-light font-sans">
+            <p className="my-2 max-w-xl py-6 font-medium  tracking-thin text-md  lg:text-left bg-gradient-to-r from-blue-400 via-slate-200 to-purple-400 bg-clip-text text-transparent">
               {ABOUT_TEXT}
             </p>
           </div>

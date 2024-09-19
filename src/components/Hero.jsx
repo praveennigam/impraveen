@@ -15,7 +15,7 @@ const container = (delay) => ({
 
 const Hero = () => {
   return (
-    <div className="bg-gradient-to-r from-blue-600 via-slate-500 to-purple-700 border-neutral-900 pb-10 lg:mb-36 mx-6 px-4 sm:px-8 md:px-10 rounded-3xl md:py-10">
+    <div className="pb-10 lg:mb-36 mx-6 px-4 sm:px-8 md:px-10 rounded-3xl md:py-10">
       <div className="my-16 flex flex-wrap">
         <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start">
           <motion.h1
@@ -28,7 +28,7 @@ const Hero = () => {
               <motion.span
                 animate={gradientAnimation}
                 transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
-                className="bg-gradient-to-r from-orange-400 via-blue-800 to-green-800 bg-clip-text mr-2 text-transparent"
+                className="bg-gradient-to-r from-blue-800 via-orange-400 to-green-800 bg-clip-text mr-2 text-transparent"
                 style={{ backgroundSize: "200%" }}
               >
                 Praveen
@@ -37,7 +37,7 @@ const Hero = () => {
               <motion.span
                 animate={gradientAnimation}
                 transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
-                className="bg-gradient-to-r from-slate-900 via-blue-800 to-green-300 bg-clip-text text-transparent"
+                className="bg-gradient-to-r from-pink-600 via-blue-700 to-green-700 bg-clip-text text-transparent"
                 style={{ backgroundSize: "200%" }}
               >
                 Nigam
@@ -48,7 +48,7 @@ const Hero = () => {
             variants={container(0.5)}
             initial="hidden"
             animate="visible"
-            className="bg-gradient-to-r from-pink-900 via-slate-900 to-blue-900 bg-clip-text text-xl sm:text-2xl tracking-tight text-transparent font-sans"
+            className="bg-gradient-to-r from-pink-900 via-slate-500 to-blue-900 bg-clip-text text-xl sm:text-2xl tracking-tight text-transparent font-sans"
           >
             <b>Full Stack Developer</b>
           </motion.span>
@@ -56,7 +56,7 @@ const Hero = () => {
             variants={container(1)}
             initial="hidden"
             animate="visible"
-            className="my-2 max-w-xl py-6 font-medium tracking-wide text-slate-900 font-sans text-center lg:text-left"
+            className="my-2 max-w-xl py-6 font-medium  tracking-tight text-md  lg:text-left bg-gradient-to-r from-blue-400 via-slate-200 to-purple-400 bg-clip-text text-transparent"
           >
             {HERO_CONTENT}
           </motion.p>

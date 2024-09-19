@@ -59,7 +59,7 @@ export const PROJECTS = [{
       image: "https://www.videocrypt.com/website_assets/img/product/two-way-streaming.webp",
       userSite: "https://beatbypraveen.onrender.com/",
       adminSite: "",
-      git: "https://github.com/praveenigam/BeatTube",
+      git: "",
       description: "A video streaming platform similar to Netflix, offering a rich user experience with a variety of video content. Users can browse, watch, and manage their playlists seamlessly. Developed using React, Node.js, Express, and MongoDB.",
       technologies: ["HTML", "CSS","Tailwind", "React", "Node.js", "Express", "MongoDB"],
   }
