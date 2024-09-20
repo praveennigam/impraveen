@@ -9,7 +9,7 @@ const Contact = () => {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 0.5 }}
-        className="my-20 text-center text-4xl "
+        className="my-20 text-center text-4xl bg-gradient-to-r from-blue-500 via-purple-400 to-yellow-900 font-light bg-clip-text mr-2 text-transparent"
       >
         {" "}
         Contact
