@@ -19,8 +19,13 @@ const Contact = () => {
 
       <div className="flex flex-col lg:flex-row justify-between">
         {/* Left Side: Video */}
-        <div className="lg:w-1/2 lg:pr-4 mb-8 lg:mb-0">
-          <h2 className="text-xl md:text-2xl text-center my-4 bg-gradient-to-r from-blue-400 via-green-500 to-yellow-500 bg-clip-text text-transparent">
+        <motion.div
+          className="lg:w-1/2 lg:pr-4 mb-8 lg:mb-0"
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 50 }}
+          transition={{ duration: 0.5 }}
+        >
+          <h2 className="text-xl md:text-2xl text-center my-4 bg-gradient-to-r from-blue-400 to-yellow-500 bg-clip-text text-transparent font-bold border-b-2 border-transparent">
             Watch My YouTube Video
           </h2>
           <div className="flex justify-center">
@@ -36,28 +41,21 @@ const Contact = () => {
               style={{ aspectRatio: '16 / 9' }} // Ensures the correct aspect ratio
             ></iframe>
           </div>
-          <div className="flex justify-center mt-10">
-            <a href="https://code-tech.onrender.com" className="flex items-center space-x-2">
-              <img 
-                src="/src/assets/logo.png" 
-                alt="Logo" 
-                className="h-10 w-10 rounded-full border-none shadow-lg transition-transform transform hover:scale-105"
-              />
-              <span className="text-lg bg-gradient-to-r from-blue-400 via-blue-500 to-yellow-500 bg-clip-text text-transparent">
-                Visit Code Tech
-              </span>
-            </a>
-          </div>
-        </div>
+        </motion.div>
 
         {/* Right Side: Contact Information */}
-        <div className="lg:w-1/2 mt-8 lg:pl-4">
+        <motion.div
+          className="lg:w-1/2 mt-32 lg:pl-4"
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 50 }}
+          transition={{ duration: 0.5 }}
+        >
           <div className="text-center tracking-tighter">
             <motion.p
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: -100 }}
               transition={{ duration: 0.5 }}
-              className="my-4 text-md md:text-lg bg-gradient-to-r from-blue-400 via-purple-500 to-yellow-500 bg-clip-text text-transparent"
+              className="my-2 text-md md:text-lg bg-gradient-to-r from-blue-400 via-purple-500 to-yellow-500 bg-clip-text text-transparent border-b border-transparent"
             >
               {CONTACT.address}
             </motion.p>
@@ -65,7 +63,7 @@ const Contact = () => {
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: 100 }}
               transition={{ duration: 0.5 }}
-              className="my-4 text-md md:text-lg bg-gradient-to-r from-blue-400 via-purple-500 to-yellow-500 bg-clip-text text-transparent"
+              className="my-2 text-md md:text-lg bg-gradient-to-r from-blue-400 via-purple-500 to-yellow-500 bg-clip-text text-transparent border-b border-transparent"
             >
               {CONTACT.phoneNo}
             </motion.p>
@@ -74,12 +72,24 @@ const Contact = () => {
               initial={{ opacity: 0, x: -200 }}
               transition={{ duration: 0.7 }}
               href={`mailto:${CONTACT.email}`}
-              className="border-b text-md md:text-lg bg-gradient-to-r from-red-400 via-purple-500 to-green-500 bg-clip-text text-transparent"
+              className="text-md md:text-lg bg-gradient-to-r from-red-400 via-purple-500 to-green-500 bg-clip-text text-transparent border-b border-transparent"
             >
               {CONTACT.email}
             </motion.a>
+            <div className="flex justify-center mt-4">
+              <a href="https://code-tech.onrender.com" className="flex items-center space-x-2">
+                <img 
+                  src="/src/assets/logo.png" 
+                  alt="Logo" 
+                  className="h-10 w-10 rounded-full border-none shadow-lg transition-transform transform hover:scale-105"
+                />
+                <span className="text-lg bg-gradient-to-r from-blue-400 via-blue-500 to-yellow-500 bg-clip-text text-transparent border-b">
+                  Visit <span className="font-bold"> Thewebseller</span>
+                </span>
+              </a>
+            </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
