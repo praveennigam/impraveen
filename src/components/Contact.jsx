@@ -25,21 +25,30 @@ const Contact = () => {
           initial={{ opacity: 0, y: 50 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-xl md:text-2xl text-center my-4 bg-gradient-to-r from-blue-400 to-yellow-500 bg-clip-text text-transparent font-bold border-b-2 border-transparent">
+          <h2 className="text-xl md:text-2xl text-center my-4 bg-gradient-to-r from-blue-400 to-yellow-500 bg-clip-text text-transparent font-bold border-b mb-4  pb-4 mx-36">
             Watch My YouTube Video
           </h2>
           <div className="flex justify-center">
             <iframe
               width="100%"
-              height="400" // Set a proper height
+              height="400"
               src="https://www.youtube.com/embed/HljeMpKxcYE?controls=1&showinfo=0&rel=0&modestbranding=1"
               title="YouTube Video"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               className="rounded-lg max-w-full h-auto"
-              style={{ aspectRatio: '16 / 9' }} // Ensures the correct aspect ratio
+              style={{ aspectRatio: '16 / 9' }}
             ></iframe>
+          </div>
+          {/* Gradient Button */}
+          <div className="flex justify-end mt-4">
+            <a
+              href="https://www.youtube.com/@Thewebseller"
+              className="inline-block px-6  py-2  bg-gradient-to-r from-blue-900  to-yellow-900  rounded-lg text-lg font-semibold hover:scale-105 transition-transform"
+            >
+              <span className="bg-gradient-to-r from-red-800 via-green-100 to-green-500 bg-clip-text text-transparent"> Go </span> to Channel
+            </a>
           </div>
         </motion.div>
 
@@ -84,7 +93,7 @@ const Contact = () => {
                   className="h-10 w-10 rounded-full border-none shadow-lg transition-transform transform hover:scale-105"
                 />
                 <span className="text-lg bg-gradient-to-r from-blue-400 via-blue-500 to-yellow-500 bg-clip-text text-transparent border-b">
-                  Visit <span className="font-bold"> Thewebseller</span>
+                  Visit <span className="font-bold">Thewebseller</span>
                 </span>
               </a>
             </div>
