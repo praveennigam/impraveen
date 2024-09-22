@@ -1,7 +1,9 @@
 import React from "react";
 import { CONTACT } from "../constants";
 import { motion } from "framer-motion";
+import { FaMapMarkerAlt } from "react-icons/fa"; // Import the location icon
 import logo from "../assets/logo.png";
+
 const Contact = () => {
   return (
     <div className="border-b border-neutral-900 pb-36 px-4 sm:px-6 lg:px-8">
@@ -45,8 +47,9 @@ const Contact = () => {
           <div className="flex justify-end mt-4">
             <a
               href="https://www.youtube.com/@Thewebseller"
-              className="inline-block px-4 py-1 bg-gradient-to-r from-blue-600 to-purple-900 rounded-lg text-sm font-semibold hover:scale-105 transition-transform"
-            > Go to Channel
+              className="inline-block px-2 py-1 bg-gradient-to-r from-blue-600 to-purple-900 rounded-lg text-sm font-semibold hover:scale-105 transition-transform"
+            >
+              Go to Channel
             </a>
           </div>
         </motion.div>
@@ -63,8 +66,10 @@ const Contact = () => {
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: -100 }}
               transition={{ duration: 0.5 }}
-              className="my-2 text-md md:text-lg bg-gradient-to-r from-blue-400 via-purple-500 to-yellow-500 bg-clip-text text-transparent border-b border-transparent"
+              className="my-2 text-md md:text-lg flex items-center justify-center bg-gradient-to-r from-blue-600 via-purple-400 to-yellow-800
+              bg-clip-text text-transparent border-b border-transparent"
             >
+              <FaMapMarkerAlt className="text-green-700 mr-2" /> {/* Location icon */}
               {CONTACT.address}
             </motion.p>
             <motion.p
@@ -86,9 +91,9 @@ const Contact = () => {
             </motion.a>
             <div className="flex justify-center mt-4">
               <a href="https://code-tech.onrender.com" className="flex items-center space-x-2">
-                <img 
+                <img
                   src={logo}
-                  alt="Logo" 
+                  alt="Logo"
                   className="h-10 w-10 rounded-full border-none shadow-lg transition-transform transform hover:scale-105"
                 />
                 <span className="text-lg bg-gradient-to-r from-blue-400 via-blue-500 to-yellow-500 bg-clip-text text-transparent border-b">
