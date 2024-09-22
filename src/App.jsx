@@ -8,12 +8,9 @@ import Study from "./components/Study";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Resume from "./components/Resume";
-import Chatbot from "./components/Chatbot";
-import { FaComments } from "react-icons/fa";
 
 const App = () => {
   const [showButton, setShowButton] = useState(false);
-  const [showModal, setShowModal] = useState(false);
 
   const handleScroll = () => {
     if (window.scrollY > 300) {
@@ -72,24 +69,6 @@ const App = () => {
               ↑
             </button>
           </span>
-        )}
-
-        {/* Chatbot Icon */}
-        <div className="fixed bottom-20 right-2">
-          <button
-            onClick={() => setShowModal(true)}
-            className="flex items-center justify-center p-2 h-10 w-10 bg-gradient-to-r from-yellow-600  to-blue-400 rounded-full shadow-lg hover:shadow-xl transition duration-300"
-            aria-label="Chatbot"
-          >
-            <FaComments className="text-white text-lg" />
-          </button>
-        </div>
-
-        {/* Modal for Chatbot */}
-        {showModal && (
-          <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-            <Chatbot onClose={() => setShowModal(false)} />
-          </div>
         )}
       </div>
     </Router>
