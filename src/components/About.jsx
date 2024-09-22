@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <div className="border-b border-neutral-950 pb-10 py-12">
+    <div className="border-b border-t border-neutral-950 pb-10 py-12">
       <h1 className="my-16 text-center text-4xl font-sans">
         <span className="bg-gradient-to-r from-orange-900 via-blue-400 font-semibold to-yellow-300 bg-clip-text mr-2 text-transparent">
           About{" "}

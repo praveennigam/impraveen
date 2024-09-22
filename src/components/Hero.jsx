@@ -10,7 +10,7 @@ const gradientAnimation = {
 
 const Hero = () => {
   return (
-    <div className="pb-10 lg:mb-36 mx-6 px-4 sm:px-8 md:px-10 rounded-3xl md:py-10 overflow-hidden  ">
+    <div className="pb-10 lg:mb-36 mx-6 px-4 sm:px-8 md:px-10 rounded-3xl md:py-10 overflow-hidden ">
       <div className="my-16 flex flex-wrap">
         {/* Left Side Content */}
         <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start">
