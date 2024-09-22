@@ -1,7 +1,7 @@
 import React from "react";
 import { CONTACT } from "../constants";
 import { motion } from "framer-motion";
-
+import logo from "../assets/logo.png";
 const Contact = () => {
   return (
     <div className="border-b border-neutral-900 pb-36 px-4 sm:px-6 lg:px-8">
@@ -25,7 +25,7 @@ const Contact = () => {
           initial={{ opacity: 0, y: 50 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-xl md:text-2xl text-center my-4 bg-gradient-to-r from-blue-400 to-yellow-500 bg-clip-text text-transparent font-bold border-b mb-4  pb-4 mx-36">
+          <h2 className="text-xl md:text-2xl text-center my-4 bg-gradient-to-r from-blue-400 to-yellow-500 bg-clip-text text-transparent font-bold border-b mb-4 pb-4 mx-4 lg:mx-36">
             Watch My YouTube Video
           </h2>
           <div className="flex justify-center">
@@ -45,7 +45,7 @@ const Contact = () => {
           <div className="flex justify-end mt-4">
             <a
               href="https://www.youtube.com/@Thewebseller"
-              className="inline-block px-6  py-2  bg-gradient-to-r from-blue-900  to-yellow-900  rounded-lg text-lg font-semibold hover:scale-105 transition-transform"
+              className="inline-block px-4 py-1 bg-gradient-to-r from-blue-900 to-yellow-900 rounded-lg text-sm font-semibold hover:scale-105 transition-transform"
             >
               <span className="bg-gradient-to-r from-red-800 via-green-100 to-green-500 bg-clip-text text-transparent"> Go </span> to Channel
             </a>
@@ -54,7 +54,7 @@ const Contact = () => {
 
         {/* Right Side: Contact Information */}
         <motion.div
-          className="lg:w-1/2 mt-32 lg:pl-4"
+          className="lg:w-1/2 mt-8 lg:mt-0 lg:pl-4"
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: 50 }}
           transition={{ duration: 0.5 }}
@@ -88,7 +88,7 @@ const Contact = () => {
             <div className="flex justify-center mt-4">
               <a href="https://code-tech.onrender.com" className="flex items-center space-x-2">
                 <img 
-                  src="/src/assets/logo.png" 
+                  src={logo}
                   alt="Logo" 
                   className="h-10 w-10 rounded-full border-none shadow-lg transition-transform transform hover:scale-105"
                 />
