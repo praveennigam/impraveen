@@ -9,10 +9,10 @@ const Contact = () => {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 0.5 }}
-        className="my-20 text-center text-3xl md:text-4xl bg-gradient-to-r from-blue-500 via-purple-400 to-yellow-900 font-light bg-clip-text text-transparent"
+        className="my-20 text-center text-3xl md:text-4xl bg-gradient-to-r from-blue-500 via-purple-400 to-yellow-900 font-bold bg-clip-text text-transparent"
       >
         Contact
-        <span className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-3xl md:text-4xl tracking-tight text-transparent">
+        <span className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-3xl md:text-4xl tracking-tight text-transparent ml-2">
           Me
         </span>
       </motion.h1>
@@ -45,9 +45,8 @@ const Contact = () => {
           <div className="flex justify-end mt-4">
             <a
               href="https://www.youtube.com/@Thewebseller"
-              className="inline-block px-4 py-1 bg-gradient-to-r from-blue-900 to-yellow-900 rounded-lg text-sm font-semibold hover:scale-105 transition-transform"
-            >
-              <span className="bg-gradient-to-r from-red-800 via-green-100 to-green-500 bg-clip-text text-transparent"> Go </span> to Channel
+              className="inline-block px-4 py-1 bg-gradient-to-r from-blue-600 to-purple-900 rounded-lg text-sm font-semibold hover:scale-105 transition-transform"
+            > Go to Channel
             </a>
           </div>
         </motion.div>
