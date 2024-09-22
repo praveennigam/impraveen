@@ -5,39 +5,87 @@ import {
   FaLinkedin,
   FaFacebook,
   FaWhatsapp,
-  FaPhoneAlt, // Updated icon
+  FaPhoneAlt,
   FaInstagram,
   FaFilePdf,
   FaYoutube,
   FaTelegram,
 } from "react-icons/fa";
-import { motion } from "framer-motion";
-
-const rotateAnimation = {
-  rotate: [0, 0],
-};
 
 const Navbar = () => {
   const navigate = useNavigate();
 
   return (
-    <nav className="mb-20 flex items-center justify-between gap-3 py-4 px-2 bg-transparent">
+    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between py-4 px-6 bg-black border-b border-neutral-700 shadow-lg">
       <img
         src={logo}
         alt="Logo"
-        className="h-8 w-8 sm:h-10 sm:w-10 rounded-full mr-2 my-1 logo relative z-10 cursor-pointer opacity-90"
+        className="h-8 w-8 sm:h-10 sm:w-10 rounded-full cursor-pointer transition-opacity duration-300 hover:opacity-100"
         onClick={() => navigate("/")}
       />
-      
-      <div className="flex items-center justify-center gap-3 text-xl opacity-80">
-        <FaLinkedin className="text-blue-500 cursor-pointer" onClick={() => window.open("https://www.linkedin.com/in/impraveen1999", "_blank")} />
-        <FaFacebook className="text-blue-700 cursor-pointer" onClick={() => window.open("https://www.facebook.com/share/7EXCGjcN6jhvLf4g", "_blank")} />
-        <FaWhatsapp className="text-green-500 cursor-pointer" onClick={() => window.open("https://wa.me/+919109481480", "_blank")} />
-        <FaPhoneAlt className="text-blue-200 cursor-pointer" onClick={() => window.open("tel:+919109481480", "_blank")} /> {/* Updated icon */}
-        <FaInstagram className="text-pink-800 cursor-pointer" onClick={() => window.open("https://www.instagram.com/_its_praveen_", "_blank")} />
-        <FaYoutube className="text-red-600 opacity-80 cursor-pointer" onClick={() => window.open("https://youtube.com/@thewebseller?si=lTc45AaTSu1hvAb3", "_blank")} />
-        <FaTelegram className="text-blue-400 cursor-pointer" onClick={() => window.open("https://t.me/techshiksha1999", "_blank")} />
-        <FaFilePdf className="text-red-900 cursor-pointer" onClick={() => navigate("/resume")} />
+
+      <div className="flex items-center gap-4 text-xl opacity-80">
+        <a
+          href="https://www.linkedin.com/in/impraveen1999"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-500 hover:text-blue-400 transition duration-300"
+        >
+          <FaLinkedin />
+        </a>
+        <a
+          href="https://www.facebook.com/share/7EXCGjcN6jhvLf4g"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-700 hover:text-blue-600 transition duration-300"
+        >
+          <FaFacebook />
+        </a>
+        <a
+          href="https://wa.me/+919109481480"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-green-500 hover:text-green-400 transition duration-300"
+        >
+          <FaWhatsapp />
+        </a>
+        <a
+          href="tel:+919109481480"
+          className="text-blue-200 hover:text-blue-100 transition duration-300"
+        >
+          <FaPhoneAlt />
+        </a>
+        <a
+          href="https://www.instagram.com/_its_praveen_"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-pink-800 hover:text-pink-600 transition duration-300"
+        >
+          <FaInstagram />
+        </a>
+        <a
+          href="https://youtube.com/@thewebseller?si=lTc45AaTSu1hvAb3"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-red-600 hover:text-red-500 transition duration-300"
+        >
+          <FaYoutube />
+        </a>
+        <a
+          href="https://t.me/techshiksha1999"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-400 hover:text-blue-300 transition duration-300"
+        >
+          <FaTelegram />
+        </a>
+        <button
+          onClick={() => navigate("/resume")}
+          className="text-red-900 hover:text-red-700 transition duration-300"
+          aria-label="View Resume"
+        >
+          <FaFilePdf />
+        </button>
       </div>
     </nav>
   );
