@@ -1,0 +1,170 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f6f6;
+}
+
+.container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.video-container {
+  display: flex;
+  overflow-x: auto;
+  margin: 100px;
+  gap: 1.5rem;
+  padding: 10px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.video-container::-webkit-scrollbar {
+  display: none;
+}
+
+.video-card {
+  flex: 0 0 400px;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.youtube-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  flex-grow: 1;
+  position: relative;
+}
+
+.video-iframe {
+  width: 100%;
+  height: 250px;
+  border: none;
+  border-radius: 10px 10px 0 0;
+}
+
+.thumbnail {
+  position: relative;
+  height: 250px;
+  background: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-button {
+  background: #28a745;
+  border: none;
+  border-radius: 50%;
+  padding: 15px 25px;
+  cursor: pointer;
+  font-size: 2rem; /* Change to responsive font-size if needed */
+  color: white;
+  transition: transform 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-button:hover {
+  transform: scale(1.1);
+}
+
+.text-card {
+  background: white;
+  color: #333;
+  border-radius: 0 0 10px 10px;
+  padding: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  transition: bottom 0.3s ease;
+}
+
+.youtube-card:hover .text-card {
+  bottom: 0;
+}
+
+.youtube-card:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+h3 {
+  font-size: 2vw; /* Responsive font size for headings */
+  margin: 10px 0; /* Adjust margins */
+}
+
+p {
+  font-size: 1.5vw; /* Responsive font size for paragraphs */
+}
+
+@media (max-width: 768px) {
+  .video-card {
+    flex: 0 0 300px;
+  }
+
+  h3 {
+    font-size: 4vw; /* Larger heading for medium screens */
+  }
+
+  p {
+    font-size: 3vw; /* Larger paragraph text for medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .video-container {
+    flex-wrap: wrap;
+    margin: 10px;
+  }
+
+  .video-card {
+    flex: 1 1 120%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .video-iframe {
+    height: 200px;
+  }
+
+  .text-card {
+    padding: 8px;
+  }
+
+  h3 {
+    font-size: 5vw; /* Adjust heading size for small devices */
+  }
+
+  p {
+    font-size: 4vw; /* Adjust paragraph size for small devices */
+  }
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #ff0000, #00ff00, #0000ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-animation 3s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
