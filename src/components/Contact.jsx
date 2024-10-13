@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { CONTACT } from "../constants";
 import { motion } from "framer-motion";
-import { FaMapMarkerAlt } from "react-icons/fa";
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaPlay } from "react-icons/fa"; // Imported necessary icons
 import logo from "../assets/logo.png";
 import "./Contact.css";
 
@@ -11,15 +11,15 @@ const Contact = () => {
   const videos = [
     {
       src: "https://www.youtube.com/embed/6VLaYrjPJb8?si=OH6R4IHtnYKi0f3N",
-      description: "React Overview: Essential concepts for beginners and developers..",
+      description: "React Overview: Essential concepts for beginners and developers.",
     },
     {
       src: "https://www.youtube.com/embed/TdVSnIQt83E?si=Cfdjikhkl-5K-W35",
-      description: "Advanced Techniques: Deep dive into hooks and performance optimization..",
+      description: "Advanced Techniques: Deep dive into hooks and performance optimization.",
     },
     {
       src: "https://www.youtube.com/embed/jCXCIA7mGXM?si=ipDEMKiiRPZS3UVn",
-      description: "Scalable Applications: Tips for efficient backend integration..",
+      description: "Scalable Applications: Tips for efficient backend integration.",
     },
     {
       src: "https://www.youtube.com/embed/gQXmU9S3Kj8?si=_fjsYgkycKS7nzVa",
@@ -28,7 +28,7 @@ const Contact = () => {
   ];
 
   const handlePlayClick = (src) => {
-    setPlayingVideo(`${src}&autoplay=1`); // Add autoplay parameter
+    setPlayingVideo(`${src}&autoplay=1`);
   };
 
   return (
@@ -64,11 +64,10 @@ const Contact = () => {
               ) : (
                 <div className="thumbnail">
                   <button className="play-button" onClick={() => handlePlayClick(video.src)}>
-                    <span>▶</span>
+                    <FaPlay className="text-white text-2xl" /> {/* Play icon */}
                   </button>
                 </div>
               )}
-              {/* Show  effect */}
               <div className="text-card">
                 <motion.div className="flex items-center text-lg text-black">
                   <span>{video.description}</span>
@@ -86,15 +85,16 @@ const Contact = () => {
           transition={{ duration: 0.5 }}
           className="my-2 flex items-center justify-center text-lg"
         >
-          <FaMapMarkerAlt className="text-green-700 mr-2" />
+          <FaMapMarkerAlt className="icon-gradient mr-2" />
           <span className="text-gradient">{CONTACT.address}</span>
         </motion.p>
         <motion.p
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: 100 }}
           transition={{ duration: 0.5 }}
-          className="my-2 text-black text-lg"
+          className="my-2 text-black text-lg flex items-center justify-center"
         >
+          <FaPhoneAlt className="icon-gradient mr-2" />
           <span className="text-gradient">{CONTACT.phoneNo}</span>
         </motion.p>
         <motion.a
@@ -102,8 +102,9 @@ const Contact = () => {
           initial={{ opacity: 0, x: -200 }}
           transition={{ duration: 0.7 }}
           href={`mailto:${CONTACT.email}`}
-          className="text-black text-lg underline"
+          className="text-black text-lg underline flex items-center justify-center"
         >
+          <FaEnvelope className="icon-gradient mr-2" />
           <span className="text-gradient">{CONTACT.email}</span>
         </motion.a>
       </div>

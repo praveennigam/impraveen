@@ -64,8 +64,9 @@ body {
 .play-button {
   background: #28a745;
   border: none;
+  margin-bottom: 10%;
   border-radius: 50%;
-  padding: 15px 25px;
+  padding: 25px 25px;
   cursor: pointer;
   font-size: 2rem; /* Change to responsive font-size if needed */
   color: white;
@@ -168,3 +169,4 @@ p {
     background-position: 100%;
   }
 }
+
