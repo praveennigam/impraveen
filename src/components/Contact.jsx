@@ -68,7 +68,7 @@ const Contact = () => {
                   </button>
                 </div>
               )}
-              {/* Show description with hover effect */}
+              {/* Show  effect */}
               <div className="text-card">
                 <motion.div className="flex items-center text-lg text-black">
                   <span>{video.description}</span>
