@@ -85,7 +85,7 @@ const Contact = () => {
           transition={{ duration: 0.5 }}
           className="my-2 flex items-center justify-center text-lg"
         >
-          <FaMapMarkerAlt className="icon-gradient mr-2" />
+          <FaMapMarkerAlt className="text-red-600 mr-2" /> {/* Red color for location */}
           <span className="text-gradient">{CONTACT.address}</span>
         </motion.p>
         <motion.p
@@ -94,7 +94,7 @@ const Contact = () => {
           transition={{ duration: 0.5 }}
           className="my-2 text-black text-lg flex items-center justify-center"
         >
-          <FaPhoneAlt className="icon-gradient mr-2" />
+          <FaPhoneAlt className="text-green-600 mr-2" /> {/* Green color for phone */}
           <span className="text-gradient">{CONTACT.phoneNo}</span>
         </motion.p>
         <motion.a
@@ -104,7 +104,7 @@ const Contact = () => {
           href={`mailto:${CONTACT.email}`}
           className="text-black text-lg underline flex items-center justify-center"
         >
-          <FaEnvelope className="icon-gradient mr-2" />
+          <FaEnvelope className="text-blue-600 mr-2" /> {/* Blue color for email */}
           <span className="text-gradient">{CONTACT.email}</span>
         </motion.a>
       </div>
