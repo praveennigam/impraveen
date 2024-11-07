@@ -60,7 +60,7 @@ const Projects = () => {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="bg-gradient-to-r from-blue-700 via-purple-500 to-yellow-400 text-white py-2 px-4 rounded-lg shadow-md mx-2"
+                    className="bg-gradient-to-r from-blue-700  to-purple-800 text-white py-2 px-4 rounded-lg shadow-md mx-2"
                     onClick={() => window.open(project.userSite, "_blank")}
                   >
                     User Site
@@ -68,7 +68,7 @@ const Projects = () => {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="bg-gradient-to-r from-purple-400 via-pink-500 to-rose-600 text-white py-2 px-4 rounded-lg shadow-md mx-2"
+                    className="bg-gradient-to-r from-rose-700  to-blue-900 text-white py-2 px-4 rounded-lg shadow-md mx-2"
                     onClick={() => window.open(project.adminSite, "_blank")}
                   >
                     Admin Site
@@ -76,7 +76,7 @@ const Projects = () => {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="bg-gradient-to-r from-blue-400 via-purple-500 to-green-700 text-white py-2 px-4 rounded-lg shadow-md mx-2"
+                    className="bg-gradient-to-r from-blue-800 to-orange-300 text-white py-2 px-4 rounded-lg shadow-md mx-2"
                     onClick={() => window.open(project.git, "_blank")}
                   >
                     Git Repository
