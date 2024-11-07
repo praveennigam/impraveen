@@ -6,8 +6,9 @@ import {
   FaCss3Alt,
   FaBootstrap,
   FaJsSquare,
+  FaDatabase, // For MySQL (generic database icon)
 } from "react-icons/fa";
-import { SiMongodb, SiExpress } from "react-icons/si";
+import { SiMongodb, SiExpress, SiJquery } from "react-icons/si";
 import { motion } from "framer-motion";
 
 const Technologies = () => {
@@ -18,7 +19,6 @@ const Technologies = () => {
       transition: {
         duration: 0.5,
         delay: 0.3,
-
         ease: "linear",
         repeat: Infinity,
         repeatType: "reverse",
@@ -35,6 +35,8 @@ const Technologies = () => {
     { Component: FaHtml5, color: "text-orange-600" },
     { Component: FaCss3Alt, color: "text-blue-600" },
     { Component: FaBootstrap, color: "text-purple-600" },
+    { Component: FaDatabase, color: "text-blue-700" }, // MySQL icon as a database
+    { Component: SiJquery, color: "text-blue-500" },  // jQuery icon
   ];
 
   return (
