@@ -1,12 +1,20 @@
 import React, { useState } from "react";
 import { CONTACT } from "../constants";
 import { motion } from "framer-motion";
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaPlay } from "react-icons/fa"; // Imported necessary icons
-import logo from "../assets/logo.png";
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaPlay } from "react-icons/fa";
+import logo from "../assets/logo.png"; // Add your logo path here
 import "./Contact.css";
 
 const Contact = () => {
   const [playingVideo, setPlayingVideo] = useState(null);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+    rating: "5",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const videos = [
     {
@@ -26,6 +34,46 @@ const Contact = () => {
       description: "MERN Application: Summary of full-stack setup and deployment.",
     },
   ];
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch(
+        "https://code-tech-1.onrender.com/api/feedback",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      if (response.ok) {
+        alert("Thank you for your feedback!");
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+          rating: "5",
+        });
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      alert("Error submitting feedback. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   const handlePlayClick = (src) => {
     setPlayingVideo(`${src}&autoplay=1`);
@@ -63,8 +111,11 @@ const Contact = () => {
                 ></iframe>
               ) : (
                 <div className="thumbnail">
-                  <button className="play-button" onClick={() => handlePlayClick(video.src)}>
-                    <FaPlay className="text-white text-2xl" /> {/* Play icon */}
+                  <button
+                    className="play-button"
+                    onClick={() => handlePlayClick(video.src)}
+                  >
+                    <FaPlay className="text-white text-2xl" />
                   </button>
                 </div>
               )}
@@ -85,7 +136,7 @@ const Contact = () => {
           transition={{ duration: 0.5 }}
           className="my-2 flex items-center justify-center text-lg"
         >
-          <FaMapMarkerAlt className="text-red-600 mr-2" /> {/* Red color for location */}
+          <FaMapMarkerAlt className="text-red-600 mr-2" />
           <span className="text-gradient">{CONTACT.address}</span>
         </motion.p>
         <motion.p
@@ -94,7 +145,7 @@ const Contact = () => {
           transition={{ duration: 0.5 }}
           className="my-2 text-black text-lg flex items-center justify-center"
         >
-          <FaPhoneAlt className="text-green-600 mr-2" /> {/* Green color for phone */}
+          <FaPhoneAlt className="text-green-600 mr-2" />
           <span className="text-gradient">{CONTACT.phoneNo}</span>
         </motion.p>
         <motion.a
@@ -104,13 +155,103 @@ const Contact = () => {
           href={`mailto:${CONTACT.email}`}
           className="text-black text-lg underline flex items-center justify-center"
         >
-          <FaEnvelope className="text-blue-600 mr-2" /> {/* Blue color for email */}
+          <FaEnvelope className="text-blue-600 mr-2" />
           <span className="text-gradient">{CONTACT.email}</span>
         </motion.a>
       </div>
 
+      <div className="mt-12">
+        <h2 className="text-center text-3xl font-bold mb-6">Feedback Form</h2>
+        <form onSubmit={handleSubmit} className="max-w-md mx-auto">
+          <div className="mb-4">
+            <label htmlFor="name" className="block text-lg font-medium mb-2">
+              Name
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+              className="w-full px-4 py-2 border  bg-transparent border-gray-600 rounded"
+            />
+          </div>
+          <div className="mb-4">
+            <label htmlFor="email" className="block text-lg font-medium mb-2">
+              Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+              className="w-full px-4 py-2 border  bg-transparent border-gray-600 rounded"
+            />
+          </div>
+          <div className="mb-4">
+            <label htmlFor="subject" className="block text-lg font-medium mb-2">
+              Phone
+            </label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              value={formData.subject}
+              onChange={handleChange}
+              required
+              className="w-full px-4 py-2 border bg-transparent border-gray-600 rounded"
+            />
+          </div>
+          <div className="mb-4">
+            <label htmlFor="rating" className="block text-lg font-medium mb-2">
+              Rating
+            </label>
+            <select
+              id="rating"
+              name="rating"
+              value={formData.rating}
+              onChange={handleChange}
+              className="w-full px-4 py-2 border  bg-transparent border-gray-600 rounded"
+            >
+              <option value="1">1 - Very Poor</option>
+              <option value="2">2 - Poor</option>
+              <option value="3">3 - Average</option>
+              <option value="4">4 - Good</option>
+              <option value="5">5 - Excellent</option>
+            </select>
+          </div>
+          <div className="mb-4">
+            <label htmlFor="message" className="block text-lg font-medium mb-2">
+              Subject
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              required
+              className="w-full bg-transparent border-gray-600 px-4 py-2 border rounded"
+              rows="4"
+            />
+          </div>
+          <button
+            type="submit"
+            disabled={isSubmitting}
+            className="w-full bg-gradient-to-r from-slate-900 via-blue-800 to-green-800 text-white py-2 px-4 rounded"
+          >
+            {isSubmitting ? "Submitting..." : "Submit"}
+          </button>
+        </form>
+      </div>
+
       <div className="footer mt-8">
-        <a href="https://code-tech.onrender.com" className="flex items-center justify-center space-x-2">
+        <a
+          href="https://code-tech.onrender.com"
+          className="flex items-center justify-center space-x-2"
+        >
           <img
             src={logo}
             alt="Logo"
