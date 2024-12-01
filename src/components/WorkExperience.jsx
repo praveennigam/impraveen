@@ -17,7 +17,7 @@ const WorkExperience = () => {
   return (
     <section
       id="work-experience"
-      className="py-20 bg-transparent text-white"  // Make the background transparent
+      className="py-28 bg-transparent text-white"  // Make the background transparent
     >
       <motion.h2
         className="text-3xl font-bold mb-10 text-center"
@@ -25,16 +25,16 @@ const WorkExperience = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <span className="bg-gradient-to-r from-orange-400 via-blue-600 font-semibold to-yellow-300 bg-clip-text text-transparent">
+        <span className="bg-gradient-to-r from-orange-400  font-semibold to-blue-600 bg-clip-text text-transparent">
           Work
         </span>{" "}
-        <span className="my-2 max-w-xl py-6 font-medium tracking-thin text-md lg:text-left bg-gradient-to-r from-blue-400 via-slate-200 to-purple-400 bg-clip-text text-transparent">
+        <span className="my-2 max-w-xl py-6 font-medium tracking-thin text-md lg:text-left bg-gradient-to-r from-blue-400 via-slate-200 to-purple-100 bg-clip-text text-transparent">
           Experience
         </span>
       </motion.h2>
 
       {/* Work Experience Cards */}
-      <div className="space-y-8">
+      <div className="space-y-12">
         {experiences.map((experience, index) => (
           <motion.div
             key={index}
@@ -52,7 +52,7 @@ const WorkExperience = () => {
             >
               {experience.company}
             </motion.h3>
-            <p className="text-md text-gradient bg-gradient-to-r from-blue-400 via-slate-200 to-purple-400 bg-clip-text text-transparent">
+            <p className="text-md text-gradient bg-gradient-to-r from-blue-400   via-slate-200 to-purple-400 bg-clip-text text-transparent">
               {experience.position}
             </p>
             <p className="text-md text-gradient bg-gradient-to-r from-blue-400  to-orange-300 bg-clip-text text-transparent">

@@ -8,6 +8,7 @@ import {
   FaJsSquare,
   FaDatabase, // For MySQL (generic database icon)
   FaPython, // Python icon
+  FaGitAlt, // Git icon
 } from "react-icons/fa";
 import { SiMongodb, SiExpress, SiJquery } from "react-icons/si";
 import { motion } from "framer-motion";
@@ -39,6 +40,7 @@ const Technologies = () => {
     { Component: FaDatabase, color: "text-blue-700" }, // MySQL icon as a database
     { Component: SiJquery, color: "text-blue-500" },  // jQuery icon
     { Component: FaPython, color: "text-yellow-500" }, // Python icon
+    { Component: FaGitAlt, color: "text-red-600" }, // Git icon
   ];
 
   return (
