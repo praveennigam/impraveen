@@ -8,6 +8,7 @@ import Study from "./components/Study";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Resume from "./components/Resume";
+import WorkExperience from "./components/WorkExperience"; // Import WorkExperience component
 
 const App = () => {
   const [showButton, setShowButton] = useState(false);
@@ -45,16 +46,20 @@ const App = () => {
           <Navbar />
 
           <Routes>
-            <Route path="/" element={
-              <>
-                <Hero />
-                <About />
-                <Technologies />
-                <Study />
-                <Projects />
-                <Contact />
-              </>
-            } />
+            <Route
+              path="/"
+              element={
+                <>
+                  <Hero />
+                  <About />
+                  <WorkExperience /> {/* Added WorkExperience here after About */}
+                  <Technologies />
+                  <Study />
+                  <Projects />
+                  <Contact />
+                </>
+              }
+            />
             <Route path="/resume" element={<Resume />} />
           </Routes>
         </div>
@@ -74,6 +79,5 @@ const App = () => {
     </Router>
   );
 };
-
 
 export default App;

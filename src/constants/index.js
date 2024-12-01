@@ -4,7 +4,15 @@ import quiz from "../assets/quiz.jpeg";  // Import the quiz image directly
 
 export const HERO_CONTENT = `I am a passionate full stack developer eager to start my career by crafting robust and scalable web applications. Having recently completed my studies in Computer Science, I have developed strong skills in front-end technologies like React, HTML, and CSS, as well as back-end technologies like Node.js, Express, and MongoDB. My goal is to leverage my knowledge and enthusiasm to create innovative solutions that deliver exceptional user experiences.`;
 
-export const ABOUT_TEXT = `I am an full stack developer with a passion for crafting efficient and user-friendly web applications. As a recent graduate in Computer Science, I have gained hands-on experience with technologies such as React, Node.js, Express, MongoDB, JavaScript, HTML,BootStrap and CSS. My journey in web development began with a strong curiosity for technology and problem-solving, and I am excited to apply my skills and continue learning in a professional environment. I thrive in collaborative settings and am eager to contribute to innovative projects. Beyond coding, I enjoy exploring new technologies and staying active in the tech community.`;
+export const ABOUT_TEXT = `I am a passionate full-stack developer with a strong foundation in both front-end and back-end technologies, eager to create innovative and scalable web applications. With a degree in Computer Science, I have honed my skills in modern web development frameworks and tools such as React, Node.js, MongoDB, RDBMS, Python, and jQuery.
+
+On the front-end, I am proficient in building responsive, user-friendly interfaces using React, CSS, React Material UI, Tailwind CSS, HTML, and Bootstrap. I focus on delivering exceptional user experiences through clean, maintainable code and intuitive designs. On the back-end, I leverage technologies like Node.js, Express, and MongoDB to build scalable APIs and server-side solutions. Additionally, I work with RDBMS for relational database management, ensuring data integrity and efficient storage.
+
+My journey in web development began with a natural curiosity for technology and problem-solving, and it has evolved into a deep commitment to crafting solutions that are both innovative and user-centric. I thrive in collaborative environments where I can continuously learn and contribute to impactful projects.
+
+Currently, I am working at Zehntech Pvt Ltd, where I am further developing my skills in building real-world applications and gaining hands-on experience with scalable systems. I am also passionate about exploring new technologies, staying active in the tech community, and always looking for opportunities to improve my craft.
+
+As I continue to grow as a developer, I am excited about the future of web development and the opportunity to contribute to innovative solutions that make a difference.`;
 
 export const EXPERIENCES = [{
   year: "2021 - 2023",
