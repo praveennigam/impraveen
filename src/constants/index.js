@@ -73,7 +73,7 @@ export const PROJECTS = [{
 },
 {
   title: "Quiz APK",
-  image: quiz,  // Directly use the imported image here
+  image: quiz,
   userSite: "https://playwithpraveen.onrender.com/",
   adminSite: "",
   git: "",

@@ -21,6 +21,23 @@ const PROJECTS = [
       "A comprehensive e-commerce platform featuring both admin and user panels. The user panel offers a seamless shopping experience with product browsing, cart management, and secure payment processing. The admin panel allows for efficient product management, order tracking, and user management. Developed using HTML, CSS, React, Node.js, Express, and MongoDB.",
     technologies: ["HTML", "CSS", "React", "Node.js", "Express", "MongoDB"],
   },
+  {
+    title: "BeatTube",
+    image: "https://www.videocrypt.com/website_assets/img/product/two-way-streaming.webp",
+    userSite: "https://beatbypraveen.onrender.com/",
+    adminSite: "",
+    git: "",
+    description: "A video streaming platform similar to Netflix, offering a rich user experience with a variety of video content. Users can browse, watch, and manage their playlists seamlessly. Developed using React, Node.js, Express, and MongoDB.",
+    technologies: ["HTML", "CSS", "Tailwind", "React", "Node.js", "Express", "MongoDB"],
+  },
+  {
+    title: "Quiz APK",
+    userSite: "https://playwithpraveen.onrender.com/",
+    adminSite: "",
+    git: "",
+    description: "A mobile quiz application that offers a variety of multiple-choice questions on various topics. Users can test their knowledge and track their scores. The app is designed to be user-friendly and visually appealing, built with React and integrated with Firebase for real-time data management.",
+    technologies: ["React", "Tailwind", "HTML", "JavaScript", "CSS"]
+  }
 ];
 
 const Resume = () => {
@@ -68,8 +85,8 @@ const Resume = () => {
   }, []);
 
   return (
-    <div className="resume-container mx-auto max-w-4xl bg-white p-3 rounded-lg shadow-md text-gray-800 mt-16">
-      <header className="bg-blue-500 text-white p-3 pt-4 rounded-t-lg mb-2 text-center">
+    <div className="resume-container mx-auto max-w-4xl bg-white p-3 rounded-lg shadow-md text-gray-800 mt-8">
+      <header className="bg-blue-500 text-white p-3 pt-3 rounded-t-lg mb-2 text-center">
         <h1 className="text-lg font-semibold">Praveen Nigam</h1>
         <p className="text-sm">Mern Stack Developer</p>
       </header>
@@ -143,13 +160,7 @@ const Resume = () => {
       <section className="bg-gray-100 p-3 rounded-lg shadow-sm mb-4 text-sm">
         <h2 className="text-base font-semibold text-blue-500 border-b-2 border-blue-500 pb-2 mb-2">Professional Summary</h2>
         <p className="text-xs pb-2 mb-2">
-          I am a passionate full stack developer eager to start my career by crafting robust and scalable web applications.
-          Recently graduating with a degree in Computer Science, I have developed strong skills in front-end technologies like
-          React, HTML, CSS, and BootStrap, as well as back-end technologies like Node.js, Express, and MongoDB. My journey in
-          web development began with a strong curiosity for technology and problem-solving. I thrive in collaborative settings,
-          and I am excited to apply my hands-on experience to create innovative solutions that deliver exceptional user experiences.
-          Beyond coding, I enjoy exploring new technologies, staying active in the tech community, and am eager to continue learning
-          in a professional environment.
+          I am a passionate full-stack developer who loves building web applications that are functional and user-friendly. I specialize in creating responsive interfaces using React, HTML, CSS, Tailwind CSS, and Bootstrap. In React, I leverage state management and hooks to handle complex interactions efficiently.On the back-end, I work with Node.js, Express, and MongoDB to build APIs and manage data. What excites me about web development is the ability to create solutions that help people and make their lives easier. I’m always eager to learn new technologies and collaborate with others to build impactful applications.
         </p>
       </section>
 
@@ -179,9 +190,9 @@ const Resume = () => {
         </section>
       </div>
 
-      <section className="bg-gray-100 p-3 rounded-lg shadow-sm mb-8 text-xs">
+      <section className="bg-gray-100 p-3 pb-10 mt-4 rounded-lg shadow-sm mb-8 text-xs">
         <h2 className="text-base font-semibold text-blue-500 border-b-2 border-blue-500 pb-2 mb-2">Education</h2>
-        <ul className="list-disc pl-5 space-y-1">
+        <ul className="list-disc pl-5 space-y-3">
           <li>
             <strong>MCA in Software Engineering</strong> - Shri Vaishnav Vidyapeeth Vishwavidyalaya, Indore (2021 - Oct 2023) Graduated with 6.2 CGPA
           </li>
@@ -197,7 +208,7 @@ const Resume = () => {
         </ul>
       </section>
 
-      <section className="bg-gray-100 p-3 rounded-lg shadow-sm mb-4  text-xs">
+      <section className="bg-gray-100 p-3 rounded-lg shadow-sm mb-4   text-xs">
         <h2 className="text-base font-semibold text-blue-500 border-b-2 border-blue-500 pb-2 mb-2">Work Experience</h2>
         <ul className="list-disc pl-5 space-y-1">
           <li>
