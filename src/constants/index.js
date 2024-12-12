@@ -1,7 +1,7 @@
 import project1 from '../assets/project-1.jpg'
 import project2 from '../assets/project-2.jpg'
 import quiz from "../assets/quiz.jpeg";  
-
+import project3 from "../assets/project-3.png"
 export const HERO_CONTENT = `I am a passionate full stack developer eager to start my career by crafting robust and scalable web applications. Having recently completed my studies in Computer Science, I have developed strong skills in front-end technologies like React, HTML, and CSS, as well as back-end technologies like Node.js, Express, and MongoDB. My goal is to leverage my knowledge and enthusiasm to create innovative solutions that deliver exceptional user experiences.`;
 
 export const ABOUT_TEXT = `I am a passionate full-stack developer who loves building web applications that are both functional and easy to use. I enjoy solving problems with technology and always strive to learn more and improve my skills.
@@ -82,7 +82,7 @@ export const PROJECTS = [{
 },
                          {
   "title": "Employee Management System",
-  "image": "https://www.google.com/imgres?q=ems&imgurl=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F011%2F176%2F734%2Fnon_2x%2Fmedical-symbol-of-the-emergency-vector.jpg&imgrefurl=https%3A%2F%2Fwww.vecteezy.com%2Ffree-vector%2Fems&docid=W4xpeGJOw3aSzM&tbnid=-XUDjGrxZPv18M&vet=12ahUKEwiPxuOD16GKAxWvjq8BHQpDKpAQM3oECFQQAA..i&w=980&h=980&hcb=2&ved=2ahUKEwiPxuOD16GKAxWvjq8BHQpDKpAQM3oECFQQAA",
+  "image": "project3",
   "userSite": "",
   "adminSite": "http://managementbypraveen.onrender.com/",
   "git": "",
