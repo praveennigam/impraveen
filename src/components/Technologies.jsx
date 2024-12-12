@@ -47,9 +47,9 @@ const Technologies = () => {
         transition={{ duration: 0.5 }}
         className="my-20 text-center text-4xl"
       >
-        <span className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-4xl font-semibold text-transparent">
+        <span className="bg-gradient-to-r from-pink-800 via-slate-500 to-purple-500 bg-clip-text text-4xl font-semibold text-transparent">
           Techno
-          <span className="bg-gradient-to-r from-blue-900 via-green-950 to-purple-900 text-transparent bg-clip-text text-4xl tracking-tight">
+          <span className="bg-gradient-to-r from-blue-900 via-rose-300 to-purple-900 text-transparent bg-clip-text text-4xl tracking-tight">
             logies
           </span>
         </span>

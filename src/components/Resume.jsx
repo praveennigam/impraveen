@@ -38,6 +38,20 @@ const PROJECTS = [
     description: "A mobile quiz application that offers a variety of multiple-choice questions on various topics. Users can test their knowledge and track their scores. The app is designed to be user-friendly and visually appealing, built with React and integrated with Firebase for real-time data management.",
     technologies: ["React", "Tailwind", "HTML", "JavaScript", "CSS"]
   }
+  ,
+  {
+    "title": "Employee Management System",
+    "adminSite": "http://managementbypraveen.onrender.com/",
+  "description": "The Employee Management System simplifies employee management with role-based access for Admins, HR, and Employees. It includes real-time complaint management with Socket.IO, offer letter generation via Nodemailer, and attendance tracking. HR manages leave requests, salary slips, deductions, and increments. Managers assign and track tasks. The signup page is restricted to Admins, with roles assigned by them. The system uses a tree-based workflow for organized task management and offers a modern, user-friendly interface.",
+    "technologies": [
+      "Node.js",
+      "Express",
+      "EJS",
+      "CSS",
+      "JavaScript"
+    ]
+  }
+  
 ];
 
 const Resume = () => {

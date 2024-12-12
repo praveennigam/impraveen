@@ -24,7 +24,7 @@ const Hero = () => {
               <motion.span
                 animate={gradientAnimation}
                 transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
-                className="bg-gradient-to-r from-blue-800 via-orange-400 to-green-800 bg-clip-text mr-2 text-transparent"
+                className="bg-gradient-to-r from-blue-800 via-rose-700 to-blue-400 bg-clip-text mr-2 text-transparent"
                 style={{ backgroundSize: "200%" }}
               >
                 Praveen
@@ -43,7 +43,7 @@ const Hero = () => {
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className="bg-gradient-to-r from-pink-900 via-slate-500 to-blue-900 bg-clip-text text-xl sm:text-2xl tracking-tight text-transparent font-sans"
+            className="bg-gradient-to-r from-rose-200 via-blue-600 to-green-100 bg-clip-text text-xl sm:text-2xl tracking-tight text-transparent font-sans"
           >
             <b>Full Stack Developer</b>
           </motion.span>

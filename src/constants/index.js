@@ -1,7 +1,9 @@
 import project1 from '../assets/project-1.jpg'
 import project2 from '../assets/project-2.jpg'
 import quiz from "../assets/quiz.jpeg";  
-import project3 from "../assets/project-3.png"
+import project3 from "../assets/project-3.jpg";  
+
+
 export const HERO_CONTENT = `I am a passionate full stack developer eager to start my career by crafting robust and scalable web applications. Having recently completed my studies in Computer Science, I have developed strong skills in front-end technologies like React, HTML, and CSS, as well as back-end technologies like Node.js, Express, and MongoDB. My goal is to leverage my knowledge and enthusiasm to create innovative solutions that deliver exceptional user experiences.`;
 
 export const ABOUT_TEXT = `I am a passionate full-stack developer who loves building web applications that are both functional and easy to use. I enjoy solving problems with technology and always strive to learn more and improve my skills.
@@ -80,14 +82,14 @@ export const PROJECTS = [{
   description: "A mobile quiz application that offers a variety of multiple-choice questions on various topics. Users can test their knowledge and track their scores. The app is designed to be user-friendly and visually appealing, built with React and integrated with Firebase for real-time data management.",
   technologies: ["React", "Tailwind", "HTML", "JavaScript", "CSS"]
 },
-                         {
+ {
   "title": "Employee Management System",
-  "image": "project3",
+  "image": project3,
   "userSite": "",
   "adminSite": "http://managementbypraveen.onrender.com/",
   "git": "",
- "description": "The Employee Management System is a server-side application designed to simplify employee management. It features role-based access control, allowing Admins, HR, and Employees to access specific functionalities. The system includes real-time complaint management with Socket.IO, offer letter generation using Nodemailer, and attendance tracking. HR can manage leave requests, salary slips, deductions, and increments. Managers can assign and track tasks, ensuring timely completion. The signup page is restricted to Admins in the industry version, with roles assigned by Admins. The system operates in a tree-based workflow, ensuring organized task management. it provides a modern, user-friendly interface.",
- "technologies": [
+"description": "The Employee Management System simplifies employee management with role-based access for Admins, HR, and Employees. It includes real-time complaint management with Socket.IO, offer letter generation via Nodemailer, and attendance tracking. HR manages leave requests, salary slips, deductions, and increments. Managers assign and track tasks. The signup page is restricted to Admins, with roles assigned by them. The system uses a tree-based workflow for organized task management and offers a modern, user-friendly interface.",
+  "technologies": [
     "Node.js",
     "Express",
     "EJS",

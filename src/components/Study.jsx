@@ -12,7 +12,7 @@ const Study = () => {
         className="text-center text-4xl font-sans my-16"
       >
         {" "}
-        <span className="bg-gradient-to-r from-yellow-500  via-blue-400 to-rose-900 font-semibold  bg-clip-text mr-2 text-transparent">
+        <span className="bg-gradient-to-r from-yellow-500  via-blue-700 to-rose-400 font-semibold  bg-clip-text mr-2 text-transparent">
           Career{" "}
         </span>
       </motion.h1>

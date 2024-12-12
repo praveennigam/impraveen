@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div className="border-b border-t border-neutral-950 pb-10 py-12">
       <h1 className="my-16 text-center text-4xl font-sans">
-        <span className="bg-gradient-to-r from-orange-900 via-blue-400 font-semibold to-yellow-300 bg-clip-text mr-2 text-transparent">
+        <span className="bg-gradient-to-r from-orange-400 via-blue-400 font-semibold to-purple-500 bg-clip-text mr-2 text-transparent">
           About{" "}
         </span>{" "}
         <span className="my-2 max-w-xl py-6 font-medium  tracking-thin text-md  lg:text-left bg-gradient-to-r from-blue-400 via-slate-200 to-purple-400 bg-clip-text text-transparent">Me</span>
@@ -34,7 +34,7 @@ const About = () => {
           className="w-full lg:w-1/2"
         >
           <div className="flex justify-center lg:justify-start">
-            <p className="my-2 max-w-xl py-6 font-medium  tracking-thin text-md  lg:text-left bg-gradient-to-r from-blue-400 via-slate-200 to-purple-400 bg-clip-text text-transparent">
+            <p className="my-2 max-w-xl py-6 font-sm  tracking-thin text-md  lg:text-left bg-gradient-to-r from-blue-400 via-slate-200 to-purple-400 bg-clip-text text-transparent">
               {ABOUT_TEXT}
             </p>
           </div>
