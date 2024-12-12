@@ -85,8 +85,8 @@ export const PROJECTS = [{
  {
   "title": "Employee Management System",
   "image": project3,
-  "userSite": "",
-  "adminSite": "http://managementbypraveen.onrender.com/",
+  "userSite": "https://managementbypraveen.onrender.com/",
+  "adminSite": "https://managementbypraveen.onrender.com/",
   "git": "",
 "description": "The Employee Management System simplifies employee management with role-based access for Admins, HR, and Employees. It includes real-time complaint management with Socket.IO, offer letter generation via Nodemailer, and attendance tracking. HR manages leave requests, salary slips, deductions, and increments. Managers assign and track tasks. The signup page is restricted to Admins, with roles assigned by them. The system uses a tree-based workflow for organized task management and offers a modern, user-friendly interface.",
   "technologies": [
