@@ -79,7 +79,23 @@ export const PROJECTS = [{
   git: "",
   description: "A mobile quiz application that offers a variety of multiple-choice questions on various topics. Users can test their knowledge and track their scores. The app is designed to be user-friendly and visually appealing, built with React and integrated with Firebase for real-time data management.",
   technologies: ["React", "Tailwind", "HTML", "JavaScript", "CSS"]
+},
+                         {
+  "title": "Employee Management System",
+  "image": "https://www.google.com/imgres?q=ems&imgurl=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F011%2F176%2F734%2Fnon_2x%2Fmedical-symbol-of-the-emergency-vector.jpg&imgrefurl=https%3A%2F%2Fwww.vecteezy.com%2Ffree-vector%2Fems&docid=W4xpeGJOw3aSzM&tbnid=-XUDjGrxZPv18M&vet=12ahUKEwiPxuOD16GKAxWvjq8BHQpDKpAQM3oECFQQAA..i&w=980&h=980&hcb=2&ved=2ahUKEwiPxuOD16GKAxWvjq8BHQpDKpAQM3oECFQQAA",
+  "userSite": "",
+  "adminSite": "http://managementbypraveen.onrender.com/",
+  "git": "",
+  "description": "The Employee Management System is a comprehensive server-side application designed to streamline employee-related processes in organizations. It features **role-based access control**, ensuring that users like Admins, HR, and Employees only have access to the functionalities relevant to their roles. Admins have the highest level of control, HR handles employee data and payroll, and Employees can perform their specific tasks. The system includes **real-time complaint management** using **Socket.IO**, which enables employees to raise complaints instantly and communicate directly with HR or management for quick resolution. Additionally, **Nodemailer** is integrated for generating and sending offer letters to new hires, automating the onboarding process. Admins and HR can **add and manage employee data**, including personal information, job details, and other relevant records. **Attendance tracking** allows employees to log their attendance, while HR can review and monitor it. Employees can apply for **leave**, and HR can approve or reject these requests, ensuring smooth workforce management. The system also supports **salary management**, where HR can generate **salary slips**, apply **deductions**, and issue **increments**, simplifying payroll processing. **Task assignment** is another key feature, allowing managers to assign tasks to employees, track their progress, and follow up on updates. Managers can ensure that tasks are completed on time by receiving real-time status updates. The system includes a **signup page**, but in the industry-level version, this page will be restricted to Admins, who will manage user access and assign roles. Admins have the power to assign HR roles and shift workloads between team members as needed. The system operates in a **tree-based workflow**, with hierarchical task and role management. Employees, HR, and managers work in a structured system where tasks and responsibilities flow in an organized manner according to roles. The application is built with **Node.js**, **Express**, **EJS**, **CSS**, and **JavaScript**, providing a modern, intuitive interface. The system aims to simplify the management of employees, tasks, and communication within an organization.",
+  "technologies": [
+    "Node.js",
+    "Express",
+    "EJS",
+    "CSS",
+    "JavaScript"
+  ]
 }
+
 ];
 
 export const CONTACT = {
