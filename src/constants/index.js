@@ -1,7 +1,8 @@
 import project1 from '../assets/project-1.jpg'
 import project2 from '../assets/project-2.jpg'
 import quiz from "../assets/quiz.jpeg";  
-import project3 from "../assets/project-3.jpg";  
+import project3 from "../assets/project-3.jpg"; 
+import career from "../assets/career.png"; 
 
 
 export const HERO_CONTENT = `I am a passionate full stack developer eager to start my career by crafting robust and scalable web applications. Having recently completed my studies in Computer Science, I have developed strong skills in front-end technologies like React, HTML, and CSS, as well as back-end technologies like Node.js, Express, and MongoDB. My goal is to leverage my knowledge and enthusiasm to create innovative solutions that deliver exceptional user experiences.`;

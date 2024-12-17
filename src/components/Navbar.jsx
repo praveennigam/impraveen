@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 import {
@@ -14,10 +14,37 @@ import {
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const [isScrolling, setIsScrolling] = useState(false);
+
+  useEffect(() => {
+    let timer;
+
+    const handleScroll = () => {
+      setIsScrolling(true); // Make navbar transparent while scrolling
+      clearTimeout(timer);
+
+      // Delay to reapply gradient background after scrolling stops
+      timer = setTimeout(() => {
+        setIsScrolling(false);
+      }, 500);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between py-4 px-6 bg-black border-b border-neutral-700 shadow-lg">
-      <img
+    <nav
+      className={`fixed top-0 left-0 right-0 z-[999] flex items-center justify-between py-4 px-6 
+        transition-all duration-500 ease-in-out shadow-lg ${
+          isScrolling
+            ? "bg-transparent" // Transparent while scrolling
+            : "bg-gradient-to-r from-black via-blue-800 to-black" // Gradient when scrolling stops
+        }`}
+    >  <img
         src={logo}
         alt="Logo"
         className="h-8 w-8 sm:h-10 sm:w-10 rounded-full cursor-pointer transition-opacity duration-300 hover:opacity-100"
