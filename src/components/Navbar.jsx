@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 import {
@@ -14,37 +14,13 @@ import {
 
 const Navbar = () => {
   const navigate = useNavigate();
-  const [isScrolling, setIsScrolling] = useState(false);
-
-  useEffect(() => {
-    let timer;
-
-    const handleScroll = () => {
-      setIsScrolling(true); // Make navbar transparent while scrolling
-      clearTimeout(timer);
-
-      // Delay to reapply gradient background after scrolling stops
-      timer = setTimeout(() => {
-        setIsScrolling(false);
-      }, 500);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-[999] flex items-center justify-between py-4 px-6 
-        transition-all duration-500 ease-in-out shadow-lg ${
-          isScrolling
-            ? "bg-transparent" // Transparent while scrolling
-            : "bg-gradient-to-r from-black via-blue-800 to-black" // Gradient when scrolling stops
-        }`}
-    >  <img
+        transition-all duration-500 ease-in-out shadow-lg bg-gradient-to-r from-black via-blue-800 to-black`}
+    >
+      <img
         src={logo}
         alt="Logo"
         className="h-8 w-8 sm:h-10 sm:w-10 rounded-full cursor-pointer transition-opacity duration-300 hover:opacity-100"
@@ -56,7 +32,7 @@ const Navbar = () => {
           href="https://www.linkedin.com/in/impraveen1999"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-500 hover:text-blue-400 transition duration-300"
+          className="text-blue-500 hover:text-blue-400 transition duration-300 transform hover:scale-110"
         >
           <FaLinkedin />
         </a>
@@ -64,7 +40,7 @@ const Navbar = () => {
           href="https://www.facebook.com/share/7EXCGjcN6jhvLf4g"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-700 hover:text-blue-600 transition duration-300"
+          className="text-blue-700 hover:text-blue-600 transition duration-300 transform hover:scale-110"
         >
           <FaFacebook />
         </a>
@@ -72,13 +48,13 @@ const Navbar = () => {
           href="https://wa.me/+919109481480"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-green-500 hover:text-green-400 transition duration-300"
+          className="text-green-500 hover:text-green-400 transition duration-300 transform hover:scale-110"
         >
           <FaWhatsapp />
         </a>
         <a
           href="tel:+919109481480"
-          className="text-blue-200 hover:text-blue-100 transition duration-300"
+          className="text-blue-200 hover:text-blue-100 transition duration-300 transform hover:scale-110"
         >
           <FaPhoneAlt />
         </a>
@@ -86,7 +62,7 @@ const Navbar = () => {
           href="https://www.instagram.com/_its_praveen_"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-pink-800 hover:text-pink-600 transition duration-300"
+          className="text-pink-800 hover:text-pink-600 transition duration-300 transform hover:scale-110"
         >
           <FaInstagram />
         </a>
@@ -94,7 +70,7 @@ const Navbar = () => {
           href="https://youtube.com/@thewebseller?si=lTc45AaTSu1hvAb3"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-red-600 hover:text-red-500 transition duration-300"
+          className="text-red-600 hover:text-red-500 transition duration-300 transform hover:scale-110"
         >
           <FaYoutube />
         </a>
@@ -102,13 +78,13 @@ const Navbar = () => {
           href="https://t.me/techshiksha1999"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-400 hover:text-blue-300 transition duration-300"
+          className="text-blue-400 hover:text-blue-300 transition duration-300 transform hover:scale-110"
         >
           <FaTelegram />
         </a>
         <button
           onClick={() => navigate("/resume")}
-          className="text-red-900 hover:text-red-700 transition duration-300"
+          className="text-red-900 hover:text-red-700 transition duration-300 transform hover:scale-110"
           aria-label="View Resume"
         >
           <FaFilePdf />

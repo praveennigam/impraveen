@@ -34,8 +34,8 @@ const About = () => {
           className="w-full lg:w-1/2"
         >
           <div className="flex justify-center lg:justify-start">
-            <p className="my-2 max-w-xl py-6 font-sm  tracking-thin text-md  lg:text-left bg-gradient-to-r from-blue-400 via-slate-200 to-purple-400 bg-clip-text text-transparent">
-              {ABOUT_TEXT}
+          <p className="my-2 max-w-3xl tracking-tight  py-2 font-light font-sans mx-auto lg:mx-0 text-md sm:text-md text-left bg-gradient-to-r from-blue-400 via-slate-200 to-purple-400 w-full bg-clip-text text-transparent leading-tight">
+          {ABOUT_TEXT}
             </p>
           </div>
         </motion.div>

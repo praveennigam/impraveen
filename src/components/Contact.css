@@ -55,14 +55,16 @@ body {
 .thumbnail {
   position: relative;
   height: 250px;
-  background: #ccc;
+  background: linear-gradient(to right, #041e57, #f5cb2362); /* Bluish and greyish combo */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+
 .play-button {
   background: #28a745;
+  padding-top: 5px;
   border: none;
   margin-bottom: 10%;
   border-radius: 50%;

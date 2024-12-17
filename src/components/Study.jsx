@@ -1,6 +1,8 @@
 import React from "react";
 import { EXPERIENCES } from "../constants";
 import { motion } from "framer-motion";
+import career from "../assets/career.png";
+
 
 const Study = () => {
   return (
@@ -12,10 +14,11 @@ const Study = () => {
         className="text-center text-4xl font-sans my-16"
       >
         {" "}
-        <span className="bg-gradient-to-r from-yellow-500  via-blue-700 to-rose-400 font-semibold  bg-clip-text mr-2 text-transparent">
-          Career{" "}
-        </span>
-      </motion.h1>
+        <span className="inline-flex items-center bg-gradient-to-r from-yellow-500 via-blue-700 to-rose-400 font-semibold bg-clip-text mr-2 text-transparent">
+  Career{" "}
+  <img src={career} alt="" className="h-10 ml-2" />
+</span>
+</motion.h1>
       <div className="">
         {EXPERIENCES.map((experience, index) => (
           <div key={index} className="mb-16 flex flex-wrap lg:justify-center">
