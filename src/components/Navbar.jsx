@@ -67,7 +67,7 @@ const Navbar = () => {
           <FaInstagram />
         </a>
         <a
-          href="https://youtube.com/@thewebseller?si=lTc45AaTSu1hvAb3"
+          href="https://youtube.com/@sellertheweb?si=xmZPGQaMw0efoGaX"
           target="_blank"
           rel="noopener noreferrer"
           className="text-red-600 hover:text-red-500 transition duration-300 transform hover:scale-110"
