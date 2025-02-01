@@ -90,45 +90,7 @@ const Contact = () => {
         Contact <span className="ml-2">Me</span>
       </motion.h1>
 
-      <div className="video-container flex flex-wrap justify-center gap-6">
-        {videos.map((video, index) => (
-          <motion.div
-            key={index}
-            className="video-card flex flex-col"
-            whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: 50 }}
-            transition={{ duration: 0.5 }}
-          >
-            <div className="youtube-card relative">
-              {playingVideo === `${video.src}&autoplay=1` ? (
-                <iframe
-                  className="video-iframe"
-                  src={playingVideo}
-                  title={`YouTube Video ${index + 1}`}
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              ) : (
-                <div className="thumbnail">
-                  <button
-                    className="play-button"
-                    onClick={() => handlePlayClick(video.src)}
-                  >
-                    <FaPlay className="text-white text-2xl" />
-                  </button>
-                </div>
-              )}
-              <div className="text-card">
-                <motion.div className="flex items-center text-lg text-black">
-                  <span>{video.description}</span>
-                </motion.div>
-              </div>
-            </div>
-          </motion.div>
-        ))}
-      </div>
-
+      
       <div className="text-center tracking-tighter mt-8">
         <motion.p
           whileInView={{ opacity: 1, x: 0 }}
