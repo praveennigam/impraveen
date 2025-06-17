@@ -6,7 +6,8 @@ import {
   FaCss3Alt,
   FaBootstrap,
   FaJsSquare,
-  FaGitAlt, // Git icon
+  FaGitAlt,
+  FaReact, // ✅ React Native icon (reusing FaReact)
 } from "react-icons/fa";
 import { SiMongodb, SiExpress, SiJquery } from "react-icons/si";
 import { motion } from "framer-motion";
@@ -35,8 +36,9 @@ const Technologies = () => {
     { Component: FaHtml5, color: "text-orange-600" },
     { Component: FaCss3Alt, color: "text-blue-600" },
     { Component: FaBootstrap, color: "text-purple-600" },
-    { Component: SiJquery, color: "text-blue-500" },  // jQuery icon
-    { Component: FaGitAlt, color: "text-red-600" }, // Git icon
+    { Component: SiJquery, color: "text-blue-500" },
+    { Component: FaGitAlt, color: "text-red-600" },
+    { Component: FaReact, color: "text-blue-400" }, // ✅ React Native icon
   ];
 
   return (
