@@ -110,7 +110,7 @@ const Resume = () => {
           className="w-24 h-24 rounded-full object-cover border-4 border-blue-500 shadow-md"
         />
         <div>
-          <h1 className="text-2xl font-bold text-blue-600">Praveen Nigam</h1>
+          <h1 className="text-2xl font-bold text-blue-500">Praveen Nigam</h1>
           <p className="text-sm">MERN Stack Developer</p>
           <p className="text-xs text-gray-600">
             Email:{" "}
