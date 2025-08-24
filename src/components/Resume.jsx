@@ -254,7 +254,7 @@ const Resume = () => {
           <li>
             <strong>Zehntech Pvt Ltd. Indore</strong>
             <br />
-            <b>Software Engineer</b> (September 2024 - Present)
+            <b>Software Engineer</b> (September 2024 - December 2024) 
             <br />
             Working as a Software Engineer on innovative projects and solutions.
           </li>
