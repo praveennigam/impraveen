@@ -76,20 +76,22 @@ const Resume = () => {
     };
 
     const downloadButton = document.querySelector(".download-button");
-    if (downloadButton) {
-      downloadButton.style.display = "none";
-    }
+  if (downloadButton) downloadButton.style.display = "none";
 
-    html2pdf()
-      .from(element)
-      .set(options)
-      .save()
-      .finally(() => {
-        if (downloadButton) {
-          downloadButton.style.display = "block";
-        }
-      });
-  };
+  
+  element.classList.remove("mt-20");
+
+  html2pdf()
+    .from(element)
+    .set(options)
+    .save()
+    .finally(() => {
+      
+      element.classList.add("mt-20");
+
+      if (downloadButton) downloadButton.style.display = "block";
+    });
+};
 
   useEffect(() => {
     const downloadButton = document.querySelector(".download-button");
@@ -99,10 +101,33 @@ const Resume = () => {
   }, []);
 
   return (
-    <div className="resume-container mx-auto max-w-4xl bg-white p-3 rounded-lg shadow-md text-gray-800 mt-8">
-      <header className="bg-blue-500 text-white p-3 pt-3 rounded-t-lg mb-2 text-center">
-        <h1 className="text-lg font-semibold">Praveen Nigam</h1>
-        <p className="text-sm">Mern Stack Developer</p>
+    <div className="resume-container mt-20 mx-auto max-w-4xl bg-white p-2 rounded-lg shadow-md text-gray-800 mt-1">
+     <header className="flex items-center gap-4 border-b-4 border-blue-500 pb-4 mb-6 pl-8">
+        <img
+          src="src/assets/res.png" 
+          alt="Profile"
+          className="w-24 h-24 rounded-full object-cover border-4 border-blue-500 shadow-md"
+        />
+        <div>
+          <h1 className="text-2xl font-bold text-blue-600">Praveen Nigam</h1>
+          <p className="text-sm">MERN Stack Developer</p>
+          <p className="text-xs text-gray-600">
+            Email:{" "}
+            <a
+              href="mailto:praveennigam1999@gmail.com"
+              className="text-blue-500 hover:underline"
+            >
+              praveennigam1999@gmail.com
+            </a>{" "}
+            | Phone:{" "}
+            <a
+              href="tel:+919109481480"
+              className="text-blue-500 hover:underline"
+            >
+              +91 9109481480
+            </a>
+          </p>
+        </div>
       </header>
 
       <div className="flex justify-center mb-3">
@@ -204,7 +229,7 @@ const Resume = () => {
         </section>
       </div>
 
-      <section className="bg-gray-100 p-3 pb-10 mt-4 rounded-lg shadow-sm mb-8 text-xs">
+      <section className="bg-gray-100 p-2 pb-10 mt-2 rounded-lg shadow-sm mb-8 text-xs">
         <h2 className="text-base font-semibold text-blue-500 border-b-2 border-blue-500 pb-2 mb-2">Education</h2>
         <ul className="list-disc pl-5 space-y-3">
           <li>
@@ -222,7 +247,7 @@ const Resume = () => {
         </ul>
       </section>
 
-      <section className="bg-gray-100 p-3 rounded-lg shadow-sm mb-4   text-xs">
+      <section className="bg-gray-100 p-3 rounded-lg shadow-sm mb-4 pb-4   text-xs">
         <h2 className="text-base font-semibold text-blue-500 border-b-2 border-blue-500 pb-2 mb-2">Work Experience</h2>
         <ul className="list-disc pl-5 space-y-1">
           <li>

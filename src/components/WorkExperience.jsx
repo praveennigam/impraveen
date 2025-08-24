@@ -8,7 +8,7 @@ const WorkExperience = () => {
       company: "Zehntech Pvt Ltd . ",
       position: "Software Engineer",
       startDate: "September 2024",
-      endDate: "Present",
+      endDate: "December 2024",
       description: "Working as a Software Engineer on innovative projects and solutions."
     },
 
