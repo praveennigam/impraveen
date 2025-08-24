@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { FaDownload } from "react-icons/fa";
 import html2pdf from "html2pdf.js";
+import { res } from "../constants";
 
 const PROJECTS = [
   {
@@ -104,7 +105,7 @@ const Resume = () => {
     <div className="resume-container mt-20 mx-auto max-w-4xl bg-white p-2 rounded-lg shadow-md text-gray-800 mt-1">
      <header className="flex items-center gap-4 border-b-4 border-blue-500 pb-4 mb-6 pl-8">
         <img
-          src="src/assets/res.png" 
+          src={res}
           alt="Profile"
           className="w-24 h-24 rounded-full object-cover border-4 border-blue-500 shadow-md"
         />
