@@ -42,16 +42,17 @@ const Technologies = () => {
   ];
 
   return (
-    <div className="border-b border-neutral-800 pb-24">
+    <section className="py-14">
+    <div className="px-2 py-6 sm:px-4">
       <motion.h1
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 0.5 }}
         className="my-20 text-center text-4xl"
       >
-        <span className="bg-gradient-to-r from-pink-800 via-slate-500 to-purple-500 bg-clip-text text-4xl font-semibold text-transparent">
+        <span className="bg-gradient-to-r from-cyan-200 via-blue-200 to-violet-300 bg-clip-text text-4xl font-semibold text-transparent">
           Techno
-          <span className="bg-gradient-to-r from-blue-900 via-rose-300 to-purple-900 text-transparent bg-clip-text text-4xl tracking-tight">
+          <span className="bg-gradient-to-r from-fuchsia-200 via-violet-200 to-cyan-200 text-transparent bg-clip-text text-4xl tracking-tight">
             logies
           </span>
         </span>
@@ -61,13 +62,14 @@ const Technologies = () => {
           <motion.div
             key={index}
             {...getAnimationProps(index)}
-            className="rounded-2xl border-2 border-neutral-700 py-4 px-6"
+            className="rounded-2xl border border-white/20 bg-slate-950/50 py-4 px-6 shadow-lg shadow-black/20"
           >
             <Component className={`text-7xl ${color}`} />
           </motion.div>
         ))}
       </div>
     </div>
+    </section>
   );
 };
 

@@ -50,6 +50,26 @@ export const EXPERIENCES = [{
 ];
 
 export const PROJECTS = [{
+  title: "Grolynk.com",
+  image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200",
+  userSite: "https://grolynk.com",
+  callLink: "tel:+919109481480",
+  adminSite: "",
+  git: "",
+  description: "A modern business platform built with Next.js for fast performance, SEO optimization, and scalable architecture. While working at Elymento.ai, I handled the complete Next.js implementation, including reusable UI components, dynamic routing, API integration, responsive layouts, and deployment-ready production setup. The project focuses on clean user experience, performance optimization, and reliable end-to-end functionality.",
+  technologies: ["Next.js", "React", "JavaScript", "Tailwind CSS", "REST API", "SEO"],
+},
+{
+  title: "Xentto.ai",
+  image: "https://images.unsplash.com/photo-1676299081847-824916de030a?w=1200",
+  userSite: "https://xentto.ai",
+  callLink: "tel:+919109481480",
+  adminSite: "",
+  git: "",
+  description: "An AI-focused product website developed with Next.js and optimized for speed, discoverability, and conversion. During my tenure at Elymento.ai, I delivered the complete Next.js frontend work, including page architecture, component-driven development, API-connected sections, and responsive design across devices. The implementation emphasizes production-quality code, maintainability, and strong performance metrics.",
+  technologies: ["Next.js", "React", "JavaScript", "Tailwind CSS", "API Integration", "Vercel"],
+},
+{
   title: "Food Delivery Website",
   image: project1,
   userSite: "https://food-deliveryapp-frontend.onrender.com/#explore-menu",

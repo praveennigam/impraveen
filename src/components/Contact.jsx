@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import { CONTACT } from "../constants";
 import { motion } from "framer-motion";
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaPlay } from "react-icons/fa";
-import logo from "../assets/logo.png"; // Add your logo path here
-import "./Contact.css";
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 const Contact = () => {
-  const [playingVideo, setPlayingVideo] = useState(null);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -16,25 +13,6 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const videos = [
-    {
-      src: "https://www.youtube.com/embed/6VLaYrjPJb8?si=OH6R4IHtnYKi0f3N",
-      description: "React Overview: Essential concepts for beginners and developers.",
-    },
-    {
-      src: "https://www.youtube.com/embed/TdVSnIQt83E?si=Cfdjikhkl-5K-W35",
-      description: "Advanced Techniques: Deep dive into hooks and performance optimization.",
-    },
-    {
-      src: "https://www.youtube.com/embed/jCXCIA7mGXM?si=ipDEMKiiRPZS3UVn",
-      description: "Scalable Applications: Tips for efficient backend integration.",
-    },
-    {
-      src: "https://www.youtube.com/embed/gQXmU9S3Kj8?si=_fjsYgkycKS7nzVa",
-      description: "MERN Application: Summary of full-stack setup and deployment.",
-    },
-  ];
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -43,19 +21,12 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-
     try {
-      const response = await fetch(
-        "https://code-tech-1.onrender.com/api/feedback",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        }
-      );
-
+      const response = await fetch("https://code-tech-1.onrender.com/api/feedback", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
       if (response.ok) {
         alert("Thank you for your feedback!");
         setFormData({
@@ -75,156 +46,143 @@ const Contact = () => {
     }
   };
 
-  const handlePlayClick = (src) => {
-    setPlayingVideo(`${src}&autoplay=1`);
-  };
-
   return (
-    <div className="container mx-auto max-w-full border-b border-neutral-900 pb-36 p-4 min-h-screen">
-      <motion.h1
-        whileInView={{ opacity: 1, y: 0 }}
-        initial={{ opacity: 0, y: -100 }}
-        transition={{ duration: 0.5 }}
-        className="text-center text-4xl font-bold mb-16 mt-12 bg-gradient-to-r from-orange-900 via-blue-400 to-yellow-300 bg-clip-text text-transparent"
-      >
-        Contact <span className="ml-2">Me</span>
-      </motion.h1>
-
-      
-      <div className="text-center tracking-tighter mt-8">
-        <motion.p
-          whileInView={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: -100 }}
+    <section className="py-14">
+      <div className="mx-auto max-w-full p-2 pb-16 sm:p-4">
+        <motion.h1
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: -100 }}
           transition={{ duration: 0.5 }}
-          className="my-2 flex items-center justify-center text-lg"
+          className="mb-16 mt-6 text-center text-4xl font-bold bg-gradient-to-r from-cyan-200 via-blue-200 to-violet-300 bg-clip-text text-transparent"
         >
-          <FaMapMarkerAlt className="text-red-600 mr-2" />
-          <span className="text-gradient">{CONTACT.address}</span>
-        </motion.p>
-        <motion.p
-          whileInView={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: 100 }}
-          transition={{ duration: 0.5 }}
-          className="my-2 text-black text-lg flex items-center justify-center"
-        >
-          <FaPhoneAlt className="text-green-600 mr-2" />
-          <span className="text-gradient">{CONTACT.phoneNo}</span>
-        </motion.p>
-        <motion.a
-          whileInView={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: -200 }}
-          transition={{ duration: 0.7 }}
-          href={`mailto:${CONTACT.email}`}
-          className="text-black text-lg underline flex items-center justify-center"
-        >
-          <FaEnvelope className="text-blue-600 mr-2" />
-          <span className="text-gradient">{CONTACT.email}</span>
-        </motion.a>
-      </div>
+          Contact <span className="ml-2">Me</span>
+        </motion.h1>
 
-      <div className="mt-12">
-        <h2 className="text-center text-3xl font-bold mb-6">Feedback Form</h2>
-        <form onSubmit={handleSubmit} className="max-w-md mx-auto">
-          <div className="mb-4">
-            <label htmlFor="name" className="block text-lg font-medium mb-2">
-              Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              className="w-full px-4 py-2 border  bg-transparent border-gray-600 rounded"
-            />
-          </div>
-          <div className="mb-4">
-            <label htmlFor="email" className="block text-lg font-medium mb-2">
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              className="w-full px-4 py-2 border  bg-transparent border-gray-600 rounded"
-            />
-          </div>
-          <div className="mb-4">
-            <label htmlFor="subject" className="block text-lg font-medium mb-2">
-              Phone
-            </label>
-            <input
-              type="text"
-              id="subject"
-              name="subject"
-              value={formData.subject}
-              onChange={handleChange}
-              required
-              className="w-full px-4 py-2 border bg-transparent border-gray-600 rounded"
-            />
-          </div>
-          <div className="mb-4">
-            <label htmlFor="rating" className="block text-lg font-medium mb-2">
-              Rating
-            </label>
-            <select
-              id="rating"
-              name="rating"
-              value={formData.rating}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border  bg-transparent border-gray-600 rounded"
-            >
-              <option value="1">1 - Very Poor</option>
-              <option value="2">2 - Poor</option>
-              <option value="3">3 - Average</option>
-              <option value="4">4 - Good</option>
-              <option value="5">5 - Excellent</option>
-            </select>
-          </div>
-          <div className="mb-4">
-            <label htmlFor="message" className="block text-lg font-medium mb-2">
-              Subject
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-              className="w-full bg-transparent border-gray-600 px-4 py-2 border rounded"
-              rows="4"
-            />
-          </div>
-          <button
-            type="submit"
-            disabled={isSubmitting}
-            className="w-full bg-gradient-to-r from-slate-900 via-blue-800 to-green-800 text-white py-2 px-4 rounded"
+        <div className="mt-8 grid gap-4 text-center tracking-tighter sm:grid-cols-3">
+          <motion.p
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: -100 }}
+            transition={{ duration: 0.5 }}
+            className="my-2 flex items-center justify-center rounded-xl border border-cyan-300/20 bg-cyan-500/[0.06] py-3 text-lg"
           >
-            {isSubmitting ? "Submitting..." : "Submit"}
-          </button>
-        </form>
-      </div>
+            <FaMapMarkerAlt className="mr-2 text-red-500" />
+            <span className="text-slate-100">{CONTACT.address}</span>
+          </motion.p>
+          <motion.p
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: 100 }}
+            transition={{ duration: 0.5 }}
+            className="my-2 flex items-center justify-center rounded-xl border border-emerald-300/20 bg-emerald-500/[0.06] py-3 text-lg"
+          >
+            <FaPhoneAlt className="mr-2 text-green-500" />
+            <span className="text-slate-100">{CONTACT.phoneNo}</span>
+          </motion.p>
+          <motion.a
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: -200 }}
+            transition={{ duration: 0.7 }}
+            href={`mailto:${CONTACT.email}`}
+            className="flex items-center justify-center rounded-xl border border-blue-300/20 bg-blue-500/[0.06] py-3 text-lg underline"
+          >
+            <FaEnvelope className="mr-2 text-blue-500" />
+            <span className="text-slate-100">{CONTACT.email}</span>
+          </motion.a>
+        </div>
 
-      <div className="footer mt-8">
-        <a
-          href="https://code-tech.onrender.com"
-          className="flex items-center justify-center space-x-2"
-        >
-          <img
-            src={logo}
-            alt="Logo"
-            className="h-10 w-10 rounded-full border-none shadow-lg"
-          />
-          <span className="text-lg text-transparent bg-gradient-to-r from-purple-300 to-blue-300 bg-clip-text leading-6 hover:underline">
-            Visit <span className="font-bold underline hover:underline">Thewebseller</span>
-          </span>
-        </a>
+        <div className="mt-12">
+          <h2 className="mb-6 text-center text-3xl font-bold bg-gradient-to-r from-cyan-200 via-blue-200 to-violet-300 bg-clip-text text-transparent">
+            Feedback Form
+          </h2>
+          <form
+            onSubmit={handleSubmit}
+            className="mx-auto max-w-xl rounded-2xl border border-white/15 bg-slate-950/50 p-6"
+          >
+            <div className="mb-4">
+              <label htmlFor="name" className="mb-2 block text-lg font-medium text-cyan-100">
+                Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                className="w-full rounded border border-cyan-300/30 bg-transparent px-4 py-2 text-slate-50 focus:border-cyan-200 focus:outline-none"
+              />
+            </div>
+            <div className="mb-4">
+              <label htmlFor="email" className="mb-2 block text-lg font-medium text-cyan-100">
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                className="w-full rounded border border-cyan-300/30 bg-transparent px-4 py-2 text-slate-50 focus:border-cyan-200 focus:outline-none"
+              />
+            </div>
+            <div className="mb-4">
+              <label htmlFor="subject" className="mb-2 block text-lg font-medium text-cyan-100">
+                Phone
+              </label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                value={formData.subject}
+                onChange={handleChange}
+                required
+                className="w-full rounded border border-cyan-300/30 bg-transparent px-4 py-2 text-slate-50 focus:border-cyan-200 focus:outline-none"
+              />
+            </div>
+            <div className="mb-4">
+              <label htmlFor="rating" className="mb-2 block text-lg font-medium text-cyan-100">
+                Rating
+              </label>
+              <select
+                id="rating"
+                name="rating"
+                value={formData.rating}
+                onChange={handleChange}
+                className="w-full rounded border border-cyan-300/30 bg-transparent px-4 py-2 text-slate-50 focus:border-cyan-200 focus:outline-none"
+              >
+                <option value="1">1 - Very Poor</option>
+                <option value="2">2 - Poor</option>
+                <option value="3">3 - Average</option>
+                <option value="4">4 - Good</option>
+                <option value="5">5 - Excellent</option>
+              </select>
+            </div>
+            <div className="mb-4">
+              <label htmlFor="message" className="mb-2 block text-lg font-medium text-cyan-100">
+                Subject
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+                className="w-full rounded border border-cyan-300/30 bg-transparent px-4 py-2 text-slate-50 focus:border-cyan-200 focus:outline-none"
+                rows="4"
+              />
+            </div>
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="w-full rounded bg-gradient-to-r from-cyan-600 via-blue-700 to-indigo-700 px-4 py-2 font-medium text-white shadow-md transition hover:scale-[1.01] hover:brightness-110"
+            >
+              {isSubmitting ? "Submitting..." : "Submit"}
+            </button>
+          </form>
+        </div>
+
       </div>
-    </div>
+    </section>
   );
 };
 

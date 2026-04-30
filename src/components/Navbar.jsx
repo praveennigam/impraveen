@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo-unique.svg";
 import {
   FaLinkedin,
   FaFacebook,
@@ -17,8 +17,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-[999] flex items-center justify-between py-4 px-6 
-        transition-all duration-500 ease-in-out shadow-lg bg-gradient-to-r from-black via-blue-800 to-black`}
+      className="fixed top-0 left-0 right-0 z-[999] mx-auto mt-2 flex w-[96%] items-center justify-between rounded-2xl border border-cyan-200/20 bg-slate-900/35 px-4 py-3 shadow-lg shadow-black/30 backdrop-blur-xl transition-all duration-500 ease-in-out sm:px-6"
     >
       <img
         src={logo}
@@ -27,12 +26,12 @@ const Navbar = () => {
         onClick={() => navigate("/")}
       />
 
-      <div className="flex items-center gap-4 text-xl opacity-80">
+      <div className="flex items-center gap-3 text-lg opacity-90 sm:gap-4 sm:text-xl">
         <a
           href="https://www.linkedin.com/in/impraveen1999"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-500 hover:text-blue-400 transition duration-300 transform hover:scale-110"
+          className="text-blue-400 transition duration-300 hover:scale-110 hover:text-blue-300"
         >
           <FaLinkedin />
         </a>
@@ -40,7 +39,7 @@ const Navbar = () => {
           href="https://www.facebook.com/share/7EXCGjcN6jhvLf4g"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-700 hover:text-blue-600 transition duration-300 transform hover:scale-110"
+          className="text-blue-600 transition duration-300 hover:scale-110 hover:text-blue-400"
         >
           <FaFacebook />
         </a>
@@ -48,13 +47,13 @@ const Navbar = () => {
           href="https://wa.me/+919109481480"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-green-500 hover:text-green-400 transition duration-300 transform hover:scale-110"
+          className="text-green-400 transition duration-300 hover:scale-110 hover:text-green-300"
         >
           <FaWhatsapp />
         </a>
         <a
           href="tel:+919109481480"
-          className="text-blue-200 hover:text-blue-100 transition duration-300 transform hover:scale-110"
+          className="text-cyan-200 transition duration-300 hover:scale-110 hover:text-cyan-100"
         >
           <FaPhoneAlt />
         </a>
@@ -62,7 +61,7 @@ const Navbar = () => {
           href="https://www.instagram.com/_its_praveen_"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-pink-800 hover:text-pink-600 transition duration-300 transform hover:scale-110"
+          className="text-pink-400 transition duration-300 hover:scale-110 hover:text-pink-300"
         >
           <FaInstagram />
         </a>
@@ -71,13 +70,13 @@ const Navbar = () => {
           href="https://t.me/techshiksha1999"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-blue-400 hover:text-blue-300 transition duration-300 transform hover:scale-110"
+          className="text-sky-300 transition duration-300 hover:scale-110 hover:text-sky-200"
         >
           <FaTelegram />
         </a>
         <button
           onClick={() => navigate("/resume")}
-          className="text-red-900 hover:text-red-700 transition duration-300 transform hover:scale-110"
+          className="text-rose-300 transition duration-300 hover:scale-110 hover:text-rose-200"
           aria-label="View Resume"
         >
           <FaFilePdf />
