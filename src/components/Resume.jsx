@@ -116,28 +116,28 @@ const Resume = () => {
             : "border-cyan-300/20 bg-slate-900/40"
         }`}
       >
-        <div className="flex items-start justify-between gap-4">
-          <div className="flex items-center gap-4">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
+          <div className="flex items-center gap-3 sm:gap-4">
             <img
               src={res}
               alt="Profile"
-              className="h-24 w-24 rounded-full border-4 border-cyan-600 object-cover shadow-md"
+              className="h-16 w-16 sm:h-24 sm:w-24 rounded-full border-4 border-cyan-600 object-cover shadow-md"
             />
             <div>
-              <h1 className={`text-3xl font-bold ${isPdfMode ? "text-slate-900" : "text-cyan-100"}`}>
+              <h1 className={`text-xl sm:text-3xl font-bold ${isPdfMode ? "text-slate-900" : "text-cyan-100"}`}>
                 Praveen Nigam
               </h1>
               <p className={`text-sm font-semibold ${isPdfMode ? "text-cyan-700" : "text-cyan-200"}`}>
                 MERN Stack Developer
               </p>
-              <p className={`mt-1 text-xs ${isPdfMode ? "text-slate-700" : "text-slate-100"}`}>
+              <p className={`mt-1 text-[11px] sm:text-xs leading-snug break-all sm:break-normal ${isPdfMode ? "text-slate-700" : "text-slate-100"}`}>
                 <a
                   href="mailto:praveennigam1999@gmail.com"
                   className={`font-medium ${isPdfMode ? "text-cyan-700" : "text-cyan-200"}`}
                 >
                   praveennigam1999@gmail.com
                 </a>{" "}
-                |{" "}
+                <span className="hidden sm:inline">|</span>{" "}
                 <a
                   href="tel:+919109481480"
                   className={`font-medium ${isPdfMode ? "text-cyan-700" : "text-cyan-200"}`}
@@ -148,12 +148,12 @@ const Resume = () => {
             </div>
           </div>
           <button
-            className="download-button mt-1 inline-flex shrink-0 items-center whitespace-nowrap rounded-lg bg-gradient-to-r from-cyan-600 to-blue-700 px-3 py-1.5 text-xs font-medium text-white shadow-md transition hover:brightness-110"
+            className="download-button mt-1 inline-flex w-max shrink-0 self-end sm:self-auto items-center whitespace-nowrap rounded-lg bg-gradient-to-r from-cyan-600 to-blue-700 px-2 sm:px-3 py-1 text-[10px] sm:text-xs font-medium text-white shadow-md transition hover:brightness-110"
             onClick={downloadPDF}
             style={{ display: "none" }}
           >
-            <FaDownload className="mr-1.5 text-[11px]" />
-            <span className="whitespace-nowrap">Download PDF</span>
+            <FaDownload className="mr-0 sm:mr-1.5 text-[9px] sm:text-[11px]" />
+            <span className="hidden whitespace-nowrap sm:inline">Download PDF</span>
           </button>
         </div>
       </header>

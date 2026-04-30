@@ -4,37 +4,25 @@ import * as THREE from "three";
 
 const EARTH_MAP =
   "https://threejs.org/examples/textures/planets/earth_atmos_2048.jpg";
-const EARTH_NORMAL =
-  "https://threejs.org/examples/textures/planets/earth_normal_2048.jpg";
-const CLOUD_MAP =
-  "https://threejs.org/examples/textures/planets/earth_clouds_1024.png";
 
 function Earth() {
   const globeRef = useRef();
-  const cloudRef = useRef();
 
-  const [earthMap, normalMap, cloudMap] = useLoader(THREE.TextureLoader, [
-    EARTH_MAP,
-    EARTH_NORMAL,
-    CLOUD_MAP,
-  ]);
+  const earthMap = useLoader(THREE.TextureLoader, EARTH_MAP);
 
   useMemo(() => {
-    [earthMap, normalMap, cloudMap].forEach((texture) => {
+    [earthMap].forEach((texture) => {
       texture.colorSpace = THREE.SRGBColorSpace;
       texture.anisotropy = 8;
       texture.wrapS = THREE.RepeatWrapping;
       texture.wrapT = THREE.ClampToEdgeWrapping;
     });
-  }, [earthMap, normalMap, cloudMap]);
+  }, [earthMap]);
 
   useFrame((state, delta) => {
     if (globeRef.current) {
       globeRef.current.rotation.y += delta * 0.16;
       globeRef.current.rotation.x = Math.sin(state.clock.elapsedTime * 0.2) * 0.05;
-    }
-    if (cloudRef.current) {
-      cloudRef.current.rotation.y += delta * 0.2;
     }
   });
 
@@ -44,19 +32,8 @@ function Earth() {
         <sphereGeometry args={[1.42, 120, 120]} />
         <meshStandardMaterial
           map={earthMap}
-          normalMap={normalMap}
-          normalScale={new THREE.Vector2(0.6, 0.6)}
-          roughness={0.75}
+          roughness={0.82}
           metalness={0.02}
-        />
-      </mesh>
-      <mesh ref={cloudRef}>
-        <sphereGeometry args={[1.46, 120, 120]} />
-        <meshStandardMaterial
-          map={cloudMap}
-          transparent
-          opacity={0.35}
-          depthWrite={false}
         />
       </mesh>
     </group>
