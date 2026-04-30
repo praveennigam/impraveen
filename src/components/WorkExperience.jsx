@@ -1,5 +1,5 @@
 // src/components/WorkExperience.js
-import React from "react";
+
 import { motion } from "framer-motion";
 
 const WorkExperience = () => {
@@ -15,7 +15,7 @@ const WorkExperience = () => {
     {
       company: "Elymento.ai",
       position: "Software Engineer",
-      startDate: "October 2026",
+      startDate: "October 2025",
       endDate: "Present",
       description:
         "Working as a Software Engineer on product development and AI-driven solutions.",

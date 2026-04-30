@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import { FaDownload } from "react-icons/fa";
 import html2pdf from "html2pdf.js";
 import { ABOUT_TEXT, PROJECTS, res } from "../constants";
@@ -34,7 +34,7 @@ const WORK = [
   {
     company: "Elymento.ai",
     role: "Software Engineer",
-    period: "October 2026 - Present",
+    period: "October 2025 - Present",
     description: "Working on product development and AI-driven solutions.",
   },
 ];
