@@ -85,6 +85,10 @@ function attach({ user, pass, to }) {
   };
 }
 
+export function createFeedbackHandler(mail) {
+  return attach(mail);
+}
+
 export function feedbackApiPlugin(mail) {
   const handler = attach(mail);
   return {

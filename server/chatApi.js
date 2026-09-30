@@ -101,6 +101,10 @@ function attach(apiKey) {
   };
 }
 
+export function createChatHandler(apiKey) {
+  return attach(apiKey);
+}
+
 export function chatApiPlugin(apiKey) {
   const handler = attach(apiKey);
   return {
