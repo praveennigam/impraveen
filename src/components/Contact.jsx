@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { CONTACT } from "../constants";
 import { motion } from "framer-motion";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
@@ -12,6 +12,13 @@ const Contact = () => {
     rating: "5",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [toast, setToast] = useState(null);
+
+  useEffect(() => {
+    if (!toast) return undefined;
+    const timeoutId = setTimeout(() => setToast(null), 3500);
+    return () => clearTimeout(timeoutId);
+  }, [toast]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -25,13 +32,15 @@ const Contact = () => {
       const response = await fetch("/api/feedback", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
+        signal: AbortSignal.timeout(20000),
         body: JSON.stringify({
           ...formData,
           message: formData.subject,
         }),
       });
-      if (response.ok) {
-        alert("Thank you for your feedback!");
+      const data = await response.json().catch(() => ({}));
+      if (response.ok && data.ok) {
+        setToast({ type: "success", message: "Thank you for your feedback!" });
         setFormData({
           name: "",
           email: "",
@@ -40,10 +49,10 @@ const Contact = () => {
           rating: "5",
         });
       } else {
-        alert("Something went wrong. Please try again.");
+        setToast({ type: "error", message: "Something went wrong. Please try again." });
       }
     } catch (error) {
-      alert("Error submitting feedback. Please try again.");
+      setToast({ type: "error", message: "Error submitting feedback. Please try again." });
     } finally {
       setIsSubmitting(false);
     }
@@ -189,6 +198,20 @@ const Contact = () => {
         </div>
 
       </div>
+      {toast && (
+        <div className="pointer-events-none fixed bottom-6 left-0 right-0 z-[1100] flex justify-center px-4">
+          <motion.div
+            role="status"
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            className={`rounded-xl px-5 py-3 text-sm font-medium text-white shadow-lg ${
+              toast.type === "success" ? "bg-emerald-600" : "bg-rose-600"
+            }`}
+          >
+            {toast.message}
+          </motion.div>
+        </div>
+      )}
     </section>
   );
 };

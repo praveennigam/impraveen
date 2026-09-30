@@ -20,7 +20,25 @@ function textValue(value) {
   return String(value || "").trim().slice(0, 500);
 }
 
+function createTransporter(user, pass) {
+  return nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true,
+    family: 4,
+    connectionTimeout: 10000,
+    greetingTimeout: 10000,
+    socketTimeout: 15000,
+    auth: {
+      user,
+      pass: pass.replace(/\s+/g, ""),
+    },
+  });
+}
+
 function attach({ user, pass, to }) {
+  const transporter = user && pass ? createTransporter(user, pass) : null;
+
   return async (req, res) => {
     if (req.method !== "POST") {
       res.statusCode = 405;
@@ -29,7 +47,7 @@ function attach({ user, pass, to }) {
       return;
     }
 
-    if (!user || !pass || !to) {
+    if (!transporter || !to) {
       res.statusCode = 500;
       res.setHeader("Content-Type", "application/json");
       res.end(JSON.stringify({ error: "Mail credentials are missing" }));
@@ -50,14 +68,6 @@ function attach({ user, pass, to }) {
         res.end(JSON.stringify({ error: "Name, email, phone, and subject are required" }));
         return;
       }
-
-      const transporter = nodemailer.createTransport({
-        service: "gmail",
-        auth: {
-          user,
-          pass: pass.replace(/\s+/g, ""),
-        },
-      });
 
       await transporter.sendMail({
         from: `"Portfolio Feedback" <${user}>`,
