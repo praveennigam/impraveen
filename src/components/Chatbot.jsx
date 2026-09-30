@@ -72,12 +72,54 @@ function maleVoice() {
 }
 
 let activeUtterance = null;
+let keepAliveId = 0;
+
+function isIos() {
+  return (
+    /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+    (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1)
+  );
+}
+
+function speakNow(text, volume = 1) {
+  const synth = window.speechSynthesis;
+  if (!synth || !text) return;
+
+  const utterance = new SpeechSynthesisUtterance(text);
+  const voice = maleVoice();
+  if (voice) {
+    utterance.voice = voice;
+    utterance.lang = voice.lang;
+  } else {
+    utterance.lang = "en-IN";
+  }
+  utterance.rate = 1;
+  utterance.pitch = 1;
+  utterance.volume = volume;
+  activeUtterance = utterance;
+  synth.resume();
+  synth.speak(utterance);
+
+  window.clearInterval(keepAliveId);
+  keepAliveId = window.setInterval(() => {
+    if (!synth.speaking && !synth.pending) {
+      window.clearInterval(keepAliveId);
+      return;
+    }
+    synth.resume();
+  }, 8000);
+}
 
 function unlockSpeech() {
   const synth = window.speechSynthesis;
   if (!synth) return;
   synth.resume();
   synth.getVoices();
+  const prime = new SpeechSynthesisUtterance(" ");
+  prime.volume = 0.01;
+  prime.rate = 2;
+  activeUtterance = prime;
+  synth.speak(prime);
 }
 
 function speak(text) {
@@ -85,29 +127,16 @@ function speak(text) {
   if (!synth || !text) return;
 
   const start = () => {
+    if (isIos()) {
+      speakNow(text);
+      return;
+    }
     synth.cancel();
-    window.setTimeout(() => {
-      synth.resume();
-      const utterance = new SpeechSynthesisUtterance(text);
-      const voice = maleVoice();
-      if (voice) {
-        utterance.voice = voice;
-        utterance.lang = voice.lang;
-      } else {
-        utterance.lang = "en-US";
-      }
-      utterance.rate = 1;
-      utterance.pitch = 1;
-      activeUtterance = utterance;
-      synth.speak(utterance);
-    }, 80);
+    window.setTimeout(() => speakNow(text), 80);
   };
 
-  if (synth.getVoices().length) start();
-  else {
-    synth.getVoices();
-    synth.addEventListener("voiceschanged", start, { once: true });
-  }
+  if (isIos() || synth.getVoices().length) start();
+  else synth.addEventListener("voiceschanged", start, { once: true });
 }
 
 const Chatbot = () => {
@@ -215,8 +244,8 @@ const Chatbot = () => {
       if (finalText) sendMessage(finalText);
     };
 
-    unlockSpeech();
     window.speechSynthesis?.cancel();
+    unlockSpeech();
     recognitionRef.current = recognition;
     setVoiceError("");
     setListening(true);
@@ -301,6 +330,8 @@ const Chatbot = () => {
               window.speechSynthesis?.cancel();
               recognitionRef.current?.stop();
               setListening(false);
+            } else {
+              unlockSpeech();
             }
             return !value;
           })
