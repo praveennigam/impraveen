@@ -10,7 +10,8 @@ import Study from "./components/Study";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Resume from "./components/Resume";
-import WorkExperience from "./components/WorkExperience"; // Import WorkExperience component
+import WorkExperience from "./components/WorkExperience";
+import Chatbot from "./components/Chatbot";
 
 const App = () => {
   const [showButton, setShowButton] = useState(false);
@@ -71,6 +72,8 @@ const App = () => {
             <Route path="/resume" element={<Resume />} />
           </Routes>
         </div>
+
+        <Chatbot />
 
         {showButton && (
           <button
